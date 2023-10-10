@@ -20,6 +20,7 @@ namespace periode_1_gebruikersinteractie_groep_6
     /// </summary>
     public partial class MainWindow : Window
     {
+        //hoi
         public MainWindow()
         {
             InitializeComponent();
