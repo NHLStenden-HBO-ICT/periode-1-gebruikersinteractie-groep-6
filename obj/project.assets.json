@@ -8,23 +8,23 @@
     "net7.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\ddaen\\.nuget\\packages\\": {},
+    "C:\\Users\\donny\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ddaen\\Source\\Repos\\periode-1-gebruikersinteractie-groep-6\\periode-1-gebruikersinteractie-groep-6.csproj",
+      "projectUniqueName": "C:\\Users\\donny\\Desktop\\Game interaction\\periode-1-gebruikersinteractie-groep-6\\periode-1-gebruikersinteractie-groep-6.csproj",
       "projectName": "periode-1-gebruikersinteractie-groep-6",
-      "projectPath": "C:\\Users\\ddaen\\Source\\Repos\\periode-1-gebruikersinteractie-groep-6\\periode-1-gebruikersinteractie-groep-6.csproj",
-      "packagesPath": "C:\\Users\\ddaen\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ddaen\\Source\\Repos\\periode-1-gebruikersinteractie-groep-6\\obj\\",
+      "projectPath": "C:\\Users\\donny\\Desktop\\Game interaction\\periode-1-gebruikersinteractie-groep-6\\periode-1-gebruikersinteractie-groep-6.csproj",
+      "packagesPath": "C:\\Users\\donny\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\donny\\Desktop\\Game interaction\\periode-1-gebruikersinteractie-groep-6\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\ddaen\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\donny\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
