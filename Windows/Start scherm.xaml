@@ -1,0 +1,42 @@
+﻿<Window x:Class="periode_1_gebruikersinteractie_groep_6.Windows.Page1"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:periode_1_gebruikersinteractie_groep_6.Windows"
+      mc:Ignorable="d" 
+      Title="Opscreen" Height="1080" Width="1920">
+
+    <Grid Margin="10" Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+
+        <Image Margin="0,0,0,0" Grid.RowSpan="3" Source="/Assets/Background.jpg" Stretch="Fill" Grid.ColumnSpan="3"/>
+
+        <StackPanel Grid.Column="1" Grid.Row="2" Grid.RowSpan="2" Grid.ColumnSpan="">
+            <Button x:Name="button" Content="Hello" Height="358" Width="1808" Background="{x:Null}" BorderBrush="{x:Null}">
+                <Button.ContentTemplate>
+                    <DataTemplate>
+                        <Viewbox>
+                            <TextBlock><Run Text=""/>klik hier om te beginnen</TextBlock>
+                        </Viewbox>
+                    </DataTemplate>
+                </Button.ContentTemplate>
+            </Button>
+        </StackPanel>
+    
+
+
+
+    </Grid>
+</Window>
