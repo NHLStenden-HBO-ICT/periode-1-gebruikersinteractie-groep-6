@@ -38,7 +38,7 @@ namespace periode_1_gebruikersinteractie_groep_6.Logic
 			objects = new();
 			lastTick = getTime();
 			gameTimer = new DispatcherTimer();
-			gameTimer.Interval = TimeSpan.FromMilliseconds(1);
+			gameTimer.Interval = TimeSpan.FromMilliseconds(1000/60);
 			gameTimer.Tick += new EventHandler(Update);
 			gameTimer.Start();
 		}
