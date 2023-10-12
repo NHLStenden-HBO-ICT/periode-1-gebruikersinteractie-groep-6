@@ -9,7 +9,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Windows\" />
+    <None Remove="Assets\Background.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\Background.jpg" />
   </ItemGroup>
 
 </Project>
