@@ -6,27 +6,27 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="1080" Width="1920">
 
+	<Viewbox StretchDirection="Both" Stretch="Uniform">
+		<Grid>
+			<Grid.RowDefinitions>
+				<RowDefinition Height="174"/>
+				<RowDefinition Height="68*"/>
+				<RowDefinition Height="111*"/>
+				<RowDefinition Height="128*"/>
+				<RowDefinition Height="128*"/>
+				<RowDefinition Height="20"/>
+			</Grid.RowDefinitions>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="20"/>
+				<ColumnDefinition Width="226*"/>
+				<ColumnDefinition Width="420*"/>
+				<ColumnDefinition Width="720*"/>
+				<ColumnDefinition Width="201*"/>
+				<ColumnDefinition Width="313*"/>
+				<ColumnDefinition Width="20"/>
+			</Grid.ColumnDefinitions>
 
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="174"/>
-            <RowDefinition Height="68*"/>
-            <RowDefinition Height="111*"/>
-            <RowDefinition Height="128*"/>
-            <RowDefinition Height="128*"/>
-            <RowDefinition Height="20"/>
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="20"/>
-            <ColumnDefinition Width="226*"/>
-            <ColumnDefinition Width="420*"/>
-            <ColumnDefinition Width="720*"/>
-            <ColumnDefinition Width="201*"/>
-            <ColumnDefinition Width="313*"/>
-            <ColumnDefinition Width="20"/>
-        </Grid.ColumnDefinitions>
-
-        <Border x:Name="instellingenAchtergrond"
+			<Border x:Name="instellingenAchtergrond"
                 Grid.Row="1"
                 Grid.Column="3"
                 Background="#ffb34f"
@@ -34,7 +34,7 @@
                 />
 
 
-        <TextBlock
+			<TextBlock
             Text="INSTELLINGEN"
             TextAlignment="Center"
             Foreground="#1f1f1f"
@@ -47,7 +47,7 @@
             
             />
 
-        <TextBlock
+			<TextBlock
             Text="GELUID"
             TextAlignment="Left"
             HorizontalAlignment="Left"
@@ -61,7 +61,7 @@
             
             />
 
-        <Slider
+			<Slider
             VerticalAlignment="Center"
             HorizontalAlignment="Center"
             Grid.Column="3"
@@ -70,7 +70,7 @@
             Height="18"
             />
 
-        <TextBlock
+			<TextBlock
             Text="EFFECTEN"
             TextAlignment="Left"
             HorizontalAlignment="Left"
@@ -84,7 +84,7 @@
             
             />
 
-        <Slider
+			<Slider
             VerticalAlignment="Center"
             HorizontalAlignment="Center"
             Grid.Column="3"
@@ -93,7 +93,7 @@
             Height="18"
             />
 
-        <TextBlock
+			<TextBlock
             Text="VOLUME"
             TextAlignment="Left"
             HorizontalAlignment="Left"
@@ -109,7 +109,7 @@
 
 
 
-        <Slider 
+			<Slider 
             VerticalAlignment="Center" 
             HorizontalAlignment="Center"
             Grid.Column="3"
@@ -118,7 +118,7 @@
             Height="18"
             />
 
-        <Button x:Name="muteButtonGeluid"
+			<Button x:Name="muteButtonGeluid"
                 Background="#b1b1b1"
                 Grid.Column="4"
                 Grid.Row="2"
@@ -126,31 +126,31 @@
                 Width="100" Margin="101,61,0,61"
                 >
 
-            <Image 
+				<Image 
             Width="80"
             Height="80"
             Source="..\Assets\instellingenUIAssets\muteButton.png" 
             Stretch="Fill"
             />
 
-        </Button>
+			</Button>
 
-        <Button x:Name="muteButtonEffecten"
+			<Button x:Name="muteButtonEffecten"
                 Background="#b1b1b1"
                 Grid.Column="4"
                 Grid.Row="3" 
                 HorizontalAlignment="Left"
                 Width="100" Margin="101,78,0,78"
                 >
-            <Image
+				<Image
                 Width="80"
                 Height="80"
                 Source="..\Assets\instellingenUIAssets\muteButton.png"
                 />
 
-        </Button>
+			</Button>
 
-        <Button
+			<Button
             x:Name="muteButtonVolume"
             Background="#b1b1b1"
             Grid.Column="4"
@@ -159,15 +159,16 @@
             Width="100" Margin="101,78,0,78"
             >
 
-            <Image
+				<Image
                 Width="80"
                 Height="80"
                 Source="..\Assets\instellingenUIAssets\muteButton.png"
                 />
-        </Button>
+			</Button>
 
 
-    </Grid>
+		</Grid>
+	</Viewbox>
 </Window>
 
 
