@@ -4,6 +4,8 @@
              xmlns:local="clr-namespace:periode_1_gebruikersinteractie_groep_6"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+		<Style TargetType="Label">
+			<Setter Property="FontFamily" Value="./Fonts/#Raleway"/>
+		</Style>
     </Application.Resources>
 </Application>
