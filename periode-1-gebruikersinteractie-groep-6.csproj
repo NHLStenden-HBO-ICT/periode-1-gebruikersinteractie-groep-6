@@ -9,11 +9,23 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Assets\Background.jpg" />
+    <None Remove="Assets\Power-Button.jpg" />
+    <None Remove="Assets\TempLogo.png" />
+    <None Remove="Fonts\Raleway.ttf" />
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Assets\Background.jpg" />
+    <Resource Include="Assets\Power-Button.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\TempLogo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Fonts\Raleway.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Background.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
-
 </Project>
