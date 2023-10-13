@@ -7,5 +7,17 @@
 		<Style TargetType="Label">
 			<Setter Property="FontFamily" Value="./Fonts/#Raleway"/>
 		</Style>
-    </Application.Resources>
+		<Style TargetType="TextBlock">
+			<Setter Property="FontFamily" Value="./Fonts/#Raleway"/>
+		</Style>
+		<Style TargetType="Button">
+			<Setter Property="FontFamily" Value="./Fonts/#Raleway"/>
+		</Style>
+		<Style TargetType="TextBox">
+			<Setter Property="FontFamily" Value="./Fonts/#Raleway"/>
+		</Style>
+		<Style TargetType="ContentControl">
+			<Setter Property="FontFamily" Value="./Fonts/#Raleway"/>
+		</Style>
+	</Application.Resources>
 </Application>
