@@ -18,8 +18,8 @@
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="20"/>
-            <ColumnDefinition Width="313*"/>
-            <ColumnDefinition Width="333*"/>
+            <ColumnDefinition Width="226*"/>
+            <ColumnDefinition Width="420*"/>
             <ColumnDefinition Width="720*"/>
             <ColumnDefinition Width="201*"/>
             <ColumnDefinition Width="313*"/>
@@ -30,9 +30,7 @@
                 Grid.Row="1"
                 Grid.Column="3"
                 Background="#ffb34f"
-                CornerRadius="40"
-                Height="120"
-                Width="660"
+                CornerRadius="40" Margin="30,8,30,8"
                 />
 
 
@@ -45,7 +43,7 @@
             Grid.Column="3"
             VerticalAlignment="Center"
             FontFamily="Calibri" 
-            FontWeight="Bold"
+            FontWeight="Bold" Height="122"
             
             />
 
@@ -59,7 +57,7 @@
             FontFamily="Calibri" 
             FontWeight="Bold"
             Grid.Column="2"
-            Grid.Row="2"
+            Grid.Row="2" Height="92" Width="230"
             
             />
 
@@ -68,7 +66,8 @@
             HorizontalAlignment="Center"
             Grid.Column="3"
             Grid.Row="2"
-            Width="700" Height="18"
+            Width="700"
+            Height="18"
             />
 
         <TextBlock
@@ -81,7 +80,7 @@
             Foreground="#1f1f1f"
             FontSize="75"
             FontFamily="Calibri" 
-            FontWeight="Bold"
+            FontWeight="Bold" Height="92" Width="304"
             
             />
 
@@ -90,7 +89,8 @@
             HorizontalAlignment="Center"
             Grid.Column="3"
             Grid.Row="3"
-            Width="700" Height="18"
+            Width="700"
+            Height="18"
             />
 
         <TextBlock
@@ -103,7 +103,7 @@
             FontFamily="Calibri" 
             FontWeight="Bold" 
             Grid.Column="2"
-            Grid.Row="4"
+            Grid.Row="4" Height="92" Width="275"
             
             />
 
@@ -114,15 +114,16 @@
             HorizontalAlignment="Center"
             Grid.Column="3"
             Grid.Row="4"
-            Width="700" Height="18"
+            Width="700"
+            Height="18"
             />
 
         <Button x:Name="muteButtonGeluid"
                 Background="#b1b1b1"
                 Grid.Column="4"
                 Grid.Row="2"
-                Height="100"
-                Width="100"
+                HorizontalAlignment="Left"
+                Width="100" Margin="101,61,0,61"
                 >
 
             <Image 
@@ -138,8 +139,8 @@
                 Background="#b1b1b1"
                 Grid.Column="4"
                 Grid.Row="3" 
-                Height="100"
-                Width="100"
+                HorizontalAlignment="Left"
+                Width="100" Margin="101,78,0,78"
                 >
             <Image
                 Width="80"
@@ -154,8 +155,8 @@
             Background="#b1b1b1"
             Grid.Column="4"
             Grid.Row="4" 
-            Height="100"
-            Width="100"
+            HorizontalAlignment="Left"
+            Width="100" Margin="101,78,0,78"
             >
 
             <Image
