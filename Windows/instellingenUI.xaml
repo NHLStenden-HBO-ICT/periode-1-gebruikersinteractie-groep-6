@@ -45,7 +45,8 @@
             Grid.Column="3"
             VerticalAlignment="Center"
             FontFamily="Calibri" 
-            FontWeight="Bold" Height="122"
+            FontWeight="Bold"
+            
             />
 
         <TextBlock
@@ -58,7 +59,8 @@
             FontFamily="Calibri" 
             FontWeight="Bold"
             Grid.Column="2"
-            Grid.Row="2" Height="92" Width="231"
+            Grid.Row="2"
+            
             />
 
         <Slider
@@ -79,7 +81,8 @@
             Foreground="#1f1f1f"
             FontSize="75"
             FontFamily="Calibri" 
-            FontWeight="Bold" Width="304" Height="92" 
+            FontWeight="Bold"
+            
             />
 
         <Slider
@@ -100,7 +103,8 @@
             FontFamily="Calibri" 
             FontWeight="Bold" 
             Grid.Column="2"
-            Grid.Row="4" Height="92" Width="275"
+            Grid.Row="4"
+            
             />
 
 
