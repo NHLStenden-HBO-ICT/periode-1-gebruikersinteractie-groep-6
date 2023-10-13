@@ -128,7 +128,7 @@
             <Image 
             Width="80"
             Height="80"
-            Source="C:\Users\leenk\Source\Repos\periode-1-gebruikersinteractie-groep-6\Assets\instellingenUIAssets\muteButton.png" 
+            Source="..\Assets\instellingenUIAssets\muteButton.png" 
             Stretch="Fill"
             />
 
@@ -144,7 +144,7 @@
             <Image
                 Width="80"
                 Height="80"
-                Source="C:\Users\leenk\Source\Repos\periode-1-gebruikersinteractie-groep-6\Assets\instellingenUIAssets\muteButton.png"
+                Source="..\Assets\instellingenUIAssets\muteButton.png"
                 />
 
         </Button>
@@ -161,7 +161,7 @@
             <Image
                 Width="80"
                 Height="80"
-                Source="C:\Users\leenk\Source\Repos\periode-1-gebruikersinteractie-groep-6\Assets\instellingenUIAssets\muteButton.png"
+                Source="..\Assets\instellingenUIAssets\muteButton.png"
                 />
         </Button>
 
