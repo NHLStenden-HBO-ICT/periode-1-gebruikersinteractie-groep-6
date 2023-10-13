@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
@@ -9,12 +9,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Assets\Power-Button.jpg" />
-    <None Remove="Assets\TempLogo.png" />
-    <None Remove="Fonts\Raleway.ttf" />
+    <None Remove="Assets\Background 2.jpg" />
   </ItemGroup>
-
   <ItemGroup>
+    <Resource Include="Assets\Background 2.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Assets\Power-Button.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>

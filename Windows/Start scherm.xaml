@@ -20,23 +20,24 @@
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
 
+        <Image Grid.ColumnSpan="3" Margin="10,10,10,0" Grid.RowSpan="3" Source="/Assets/Background 2.jpg" Stretch="Fill"/>
 
-        <Image Margin="0,0,0,0" Grid.RowSpan="3" Source="/Assets/Background.jpg" Stretch="Fill" Grid.ColumnSpan="3"/>
 
-        <StackPanel Grid.Column="1" Grid.Row="2" Grid.RowSpan="2" Grid.ColumnSpan="">
-            <Button x:Name="button" Content="Hello" Height="358" Width="1808" Background="{x:Null}" BorderBrush="{x:Null}">
+
+       
+
+
+      
+       <StackPanel Grid.Column="0" Grid.Row="2" Grid.RowSpan="2" Grid.ColumnSpan="3">
+            <Button x:Name="button" Content="Hello"  Background="{x:Null}" BorderBrush="{x:Null}">
                 <Button.ContentTemplate>
                     <DataTemplate>
                         <Viewbox>
-                            <TextBlock><Run Text=""/>klik hier om te beginnen</TextBlock>
+                            <TextBlock><Run Text="klik hier om te beginnen"/></TextBlock>
                         </Viewbox>
                     </DataTemplate>
                 </Button.ContentTemplate>
             </Button>
         </StackPanel>
-    
-
-
-
     </Grid>
 </Window>

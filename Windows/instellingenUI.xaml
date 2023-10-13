@@ -5,113 +5,169 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
         Title="MainWindow" Height="1080" Width="1920">
-    <Grid HorizontalAlignment="Left" Width="1920">
+
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="174"/>
+            <RowDefinition Height="68*"/>
+            <RowDefinition Height="111*"/>
+            <RowDefinition Height="128*"/>
+            <RowDefinition Height="128*"/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="226*"/>
+            <ColumnDefinition Width="420*"/>
+            <ColumnDefinition Width="720*"/>
+            <ColumnDefinition Width="201*"/>
+            <ColumnDefinition Width="313*"/>
+            <ColumnDefinition Width="20"/>
+        </Grid.ColumnDefinitions>
+
         <Border x:Name="instellingenAchtergrond"
-                Margin="630,194,630,756"
+                Grid.Row="1"
+                Grid.Column="3"
                 Background="#ffb34f"
-                CornerRadius="40"
+                CornerRadius="40" Margin="30,8,30,8"
                 />
+
 
         <TextBlock
             Text="INSTELLINGEN"
-                TextAlignment="Center"
+            TextAlignment="Center"
             Foreground="#1f1f1f"
             FontSize="100"
-            Margin="660,184,660,746" 
+            Grid.Row="1"
+            Grid.Column="3"
+            VerticalAlignment="Center"
             FontFamily="Calibri" 
-            FontWeight="Bold"
+            FontWeight="Bold" Height="122"
+            
             />
 
         <TextBlock
             Text="GELUID"
-            TextAlignment="Center"
+            TextAlignment="Left"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Center"
             Foreground="#1f1f1f"
             FontSize="75"
-            Margin="136,424,1494,538" 
             FontFamily="Calibri" 
             FontWeight="Bold"
+            Grid.Column="2"
+            Grid.Row="2" Height="92" Width="230"
+            
             />
 
         <Slider
-            Margin="478,457,478,0" 
-            VerticalAlignment="Top"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center"
+            Grid.Column="3"
+            Grid.Row="2"
+            Width="700"
+            Height="18"
             />
 
         <TextBlock
             Text="EFFECTEN"
-            TextAlignment="Center"
+            TextAlignment="Left"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Center"
+            Grid.Column="2"
+            Grid.Row="3"
             Foreground="#1f1f1f"
             FontSize="75"
-            Margin="111,572,1469,390" 
             FontFamily="Calibri" 
-            FontWeight="Bold"
+            FontWeight="Bold" Height="92" Width="304"
+            
             />
 
         <Slider
-            Margin="478,605,478,0" 
-            VerticalAlignment="Top"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center"
+            Grid.Column="3"
+            Grid.Row="3"
+            Width="700"
+            Height="18"
             />
 
         <TextBlock
             Text="VOLUME"
-            TextAlignment="Center"
+            TextAlignment="Left"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Center"
             Foreground="#1f1f1f"
-            FontSize="75"
-            Margin="111,710,1469,252" 
+            FontSize="75" 
             FontFamily="Calibri" 
-            FontWeight="Bold"
+            FontWeight="Bold" 
+            Grid.Column="2"
+            Grid.Row="4" Height="92" Width="275"
+            
             />
 
-        <Slider
-            Margin="478,743,478,0" 
-            VerticalAlignment="Top"
+
+
+        <Slider 
+            VerticalAlignment="Center" 
+            HorizontalAlignment="Center"
+            Grid.Column="3"
+            Grid.Row="4"
+            Width="700"
+            Height="18"
             />
 
         <Button x:Name="muteButtonGeluid"
-                Width="100"
-                Height="100" 
-                Margin="1548,416,272,548"
                 Background="#b1b1b1"
+                Grid.Column="4"
+                Grid.Row="2"
+                HorizontalAlignment="Left"
+                Width="100" Margin="101,61,0,61"
                 >
 
             <Image 
             Width="80"
             Height="80"
-            Source="C:\Users\leenk\Source\Repos\periode-1-gebruikersinteractie-groep-6\Assets\instellingenUIAssets\muteButton.png" 
+            Source="..\Assets\instellingenUIAssets\muteButton.png" 
             Stretch="Fill"
             />
 
         </Button>
 
         <Button x:Name="muteButtonEffecten"
-                Width="100"
-                Height="100"
-                Background="#b1b1b1" 
-                Margin="1548,564,272,400"
+                Background="#b1b1b1"
+                Grid.Column="4"
+                Grid.Row="3" 
+                HorizontalAlignment="Left"
+                Width="100" Margin="101,78,0,78"
                 >
             <Image
                 Width="80"
                 Height="80"
-                Source="C:\Users\leenk\Source\Repos\periode-1-gebruikersinteractie-groep-6\Assets\instellingenUIAssets\muteButton.png"
+                Source="..\Assets\instellingenUIAssets\muteButton.png"
                 />
 
         </Button>
 
         <Button
             x:Name="muteButtonVolume"
-            Width="100"
-            Height="100"
-            Background="#b1b1b1" 
-            Margin="1548,702,272,262"
+            Background="#b1b1b1"
+            Grid.Column="4"
+            Grid.Row="4" 
+            HorizontalAlignment="Left"
+            Width="100" Margin="101,78,0,78"
             >
 
             <Image
                 Width="80"
                 Height="80"
-                Source="C:\Users\leenk\Source\Repos\periode-1-gebruikersinteractie-groep-6\Assets\instellingenUIAssets\muteButton.png"
+                Source="..\Assets\instellingenUIAssets\muteButton.png"
                 />
         </Button>
 
+
     </Grid>
 </Window>
+
 
