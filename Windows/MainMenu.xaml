@@ -10,15 +10,20 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="20" />
             <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="*" />
             <ColumnDefinition Width="20" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="20" />
             <RowDefinition Height="*" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="auto" />
             <RowDefinition Height="20" />
         </Grid.RowDefinitions>
 
-        <TextBlock  Grid.Column="1" 
+        <TextBlock  Grid.Column="2" 
                     Grid.Row="1" 
                     Text="COOL RACE SPEL" 
                     FontSize="50" 
@@ -26,7 +31,7 @@
                     VerticalAlignment="Top"
                     Margin="0,200,0,0" />
 
-        <StackPanel Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Vertical">
+        <StackPanel Grid.Column="2" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Vertical">
             <Button     x:Name="startButton" 
                         Content="START" 
                         Width="160" 
@@ -59,7 +64,7 @@
 
         <Button 
                  Grid.Column="1"
-                 Grid.Row="1"
+                 Grid.Row="3"
                  Name="powerButton" 
                  Width="100" 
                  Height="100" 
@@ -70,8 +75,8 @@
         
         <Button 
                  Name="volumeButton"     
-                 Grid.Column="1"
-                 Grid.Row="1" 
+                 Grid.Column="3"
+                 Grid.Row="3" 
                  Width="100" 
                  Height="100" 
                  VerticalAlignment="Bottom"
