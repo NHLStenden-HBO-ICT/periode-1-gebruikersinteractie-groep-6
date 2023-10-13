@@ -291,10 +291,8 @@
 			CornerRadius="24" 
 			BorderBrush="Black" 
 			Background="#FFFFB34F" 
-			Height="auto" 
 			Grid.ColumnSpan="3" 
 			Grid.Row="7"
-			Margin="24"
 			Grid.Column="1">
 			<Viewbox StretchDirection="DownOnly" Stretch="Uniform">
 				<ContentControl Content="VERSNELLEN" FontSize="52" Foreground="#FF1F1F1F"/>
@@ -304,11 +302,9 @@
 			BorderThickness="1"
 			CornerRadius="24" 
 			BorderBrush="Black" 
-			Background="#FFFFB34F" 
-			Height="auto" 
+			Background="#FFFFB34F"
 			Grid.ColumnSpan="3" 
 			Grid.Row="7"
-			Margin="24"
 			Grid.Column="5">
 			<Viewbox StretchDirection="DownOnly" Stretch="Uniform">
 				<ContentControl Content="VERSNELLEN" FontSize="52" Foreground="#FF1F1F1F"/>
