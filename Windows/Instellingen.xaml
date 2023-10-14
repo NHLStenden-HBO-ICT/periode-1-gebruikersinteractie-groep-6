@@ -81,6 +81,7 @@
             FontSize="75"
             FontFamily="Calibri" 
             FontWeight="Bold" Height="92" Width="304"
+            Margin="0, 0, 50, 0"
             
             />
 
