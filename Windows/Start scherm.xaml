@@ -22,11 +22,6 @@
 
         <Image Grid.ColumnSpan="3" Margin="10,10,10,0" Grid.RowSpan="3" Source="/Assets/Background 2.jpg" Stretch="Fill"/>
 
-
-
-       
-
-
       
        <StackPanel Grid.Column="0" 
                    Grid.Row="2" Grid.RowSpan="2"
