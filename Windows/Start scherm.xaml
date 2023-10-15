@@ -28,8 +28,15 @@
 
 
       
-       <StackPanel Grid.Column="0" Grid.Row="2" Grid.RowSpan="2" Grid.ColumnSpan="3">
-            <Button x:Name="button" Content="Hello"  Background="{x:Null}" BorderBrush="{x:Null}">
+       <StackPanel Grid.Column="0" 
+                   Grid.Row="2" Grid.RowSpan="2"
+                   Grid.ColumnSpan="3">
+           
+            <Button x:Name="button" 
+                    Content="Hello"  
+                    Background="{x:Null}" 
+                    
+                    BorderBrush="{x:Null}">
                 <Button.ContentTemplate>
                     <DataTemplate>
                         <Viewbox>
