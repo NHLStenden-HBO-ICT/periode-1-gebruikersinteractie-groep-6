@@ -6,7 +6,7 @@
 	xmlns:local="clr-namespace:periode_1_gebruikersinteractie_groep_6.Windows"
 	mc:Ignorable="d"
     d:DesignHeight="{x:Static SystemParameters.PrimaryScreenHeight}" 
-	d:DesignWidth="{x:Static SystemParameters.PrimaryScreenWidth}">
+	d:DesignWidth="{x:Static SystemParameters.PrimaryScreenWidth}" Background="White">
 	<Grid>
 		<Grid.RowDefinitions>
 			<RowDefinition Height="*"/>
