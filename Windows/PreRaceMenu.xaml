@@ -81,6 +81,7 @@
             Grid.Row="4">
             <TextBlock 
                 Text="PLAYER 1:"
+                FontWeight="SemiBold"
                 HorizontalAlignment="Center"
                 FontSize="40" />
             <TextBox 
@@ -97,6 +98,7 @@
             Grid.Row="4">
             <TextBlock 
                 Text="PLAYER 2:"
+                FontWeight="SemiBold"
                 HorizontalAlignment="Center"
                 FontSize="40" />
             <TextBox 
@@ -107,27 +109,33 @@
         </StackPanel>
 
         <Button x:Name="gereedButton1" 
-                    Content="GEREED" 
+                    Content="GEREED"
+                Background="#B1B1B1"
                     Width="300" 
                     Height="75" 
-                    FontSize="52" 
+                    FontSize="48"
+                    FontWeight="SemiBold"
                     Grid.Column="2"
                     Grid.Row="5"
                     Margin ="0,10,0,10"/>
         <Button x:Name="gereedButton2" 
-                    Content="GEREED" 
+                    Content="GEREED"
+                    Background="#B1B1B1"
                     Width="300" 
                     Height="75" 
-                    FontSize="52"
+                    FontSize="48"
+                    FontWeight="SemiBold"
                     Grid.Column="5"
                     Grid.Row="5"
                     Margin ="0,10,0,10"/>
         
         <Button  x:Name="menuButton" 
-                    Content="MENU" 
+                    Content="MENU"
+                    Background="#B1B1B1"
                     Width="300" 
                     Height="75" 
-                    FontSize="52"
+                    FontSize="48"
+                    FontWeight="SemiBold"
                     Grid.Column="3"
                     Grid.Row="6"
                     Grid.ColumnSpan="2"/>

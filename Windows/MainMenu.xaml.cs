@@ -1,3 +1,39 @@
+<<<<<<< HEAD
+﻿using periode_1_gebruikersinteractie_groep_6.Windows;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
+
+namespace periode_1_gebruikersinteractie_groep_6
+{
+    /// <summary>
+    /// Interaction logic for MainWindow.xaml
+    /// </summary>
+    public partial class MainMenu : Window
+    {
+        public MainMenu()
+        {
+            InitializeComponent();
+        }
+
+        private void openInstellingenUI(object sender, RoutedEventArgs e)
+        {
+            instellingenUI instellingenUI = new instellingenUI();
+            instellingenUI.Show();
+        }
+    }
+=======
 ﻿using System.Windows.Controls;
 
 namespace periode_1_gebruikersinteractie_groep_6
@@ -12,4 +48,5 @@ namespace periode_1_gebruikersinteractie_groep_6
 			InitializeComponent();
 		}
 	}
+>>>>>>> bea85c915036684602afc4533ca104234e514dc1
 }
