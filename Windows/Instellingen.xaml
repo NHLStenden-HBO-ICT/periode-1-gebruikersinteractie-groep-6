@@ -195,7 +195,7 @@
                     Height="80"/>
             </Button>
 
-            <Button Margin="20, 0, 0, 20" 
+			<Button Margin="20, 0, 0, 20" 
                     Content="X" 
                     Width="80" 
                     Height="80" 
@@ -203,19 +203,16 @@
                     FontWeight="Bold" 
                     Grid.Column="6"
                     Grid.ColumnSpan="3">
-                <Button.Resources>
-                    <Style 
+				<Button.Resources>
+					<Style 
                         TargetType="{x:Type Border}">
-                        <Setter 
+						<Setter 
                             Property="CornerRadius" Value="5"/>
-                    </Style>
-                </Button.Resources>
-            </Button>
-
-
-
-        </Grid>
+					</Style>
+				</Button.Resources>
+			</Button>
+		</Grid>
     </Viewbox>
-</Window>
+</UserControl>
 
 
