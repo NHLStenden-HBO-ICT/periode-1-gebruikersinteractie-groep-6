@@ -7,9 +7,11 @@ namespace periode_1_gebruikersinteractie_groep_6.Windows
 	/// </summary>
 	public partial class Scoreboard : UserControl
 	{
-		public Scoreboard()
+		private Main parent;
+		public Scoreboard(Main parent)
 		{
 			InitializeComponent();
+			this.parent = parent;
 		}
 	}
 }

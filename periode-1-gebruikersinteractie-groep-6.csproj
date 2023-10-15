@@ -17,10 +17,17 @@
     <None Remove="Assets\crown.png" />
     <None Remove="Assets\game_logo.png" />
     <None Remove="Assets\instellingenUIAssets\muteButton.png" />
+    <None Remove="Assets\music.wav" />
     <None Remove="Assets\Next Button.png" />
     <None Remove="Assets\Power-Button.png" />
     <None Remove="Assets\TempLogo.png" />
     <None Remove="Assets\Volume Icon.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Assets\music.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
   </ItemGroup>
 
   <ItemGroup>
@@ -60,5 +67,9 @@
     <Resource Include="Assets\Volume Icon.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Properties\" />
   </ItemGroup>
 </Project>

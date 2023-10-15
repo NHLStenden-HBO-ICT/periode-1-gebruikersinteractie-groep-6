@@ -62,7 +62,8 @@
                         FontSize="42"
                         Margin="0, 10"
                         Background="#ffb34f"/>
-			<Button     x:Name="uitlegButton" 
+			<Button     x:Name="uitlegButton"
+                        Click="openUitleg"
                         Content="UITLEG"
                         Foreground="#1f1f1f"
                         FontWeight="Bold"

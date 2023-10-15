@@ -9,8 +9,8 @@ namespace periode_1_gebruikersinteractie_groep_6
 	/// </summary>
 	public partial class MainMenu : UserControl
 	{
-		private ContentControl parent;
-		public MainMenu(ContentControl parent)
+		private Main parent;
+		public MainMenu(Main parent)
 		{
 			InitializeComponent();
 			this.parent = parent;
@@ -18,13 +18,20 @@ namespace periode_1_gebruikersinteractie_groep_6
 
 		private void openInstellingenUI(object sender, RoutedEventArgs e)
 		{
-			instellingenUI instellingenUI = new instellingenUI();
-			parent.Content = instellingenUI;
+			instellingenUI instellingenUI = new instellingenUI(this.parent);
+			parent.ChangeContent(instellingenUI);
 		}
 
 		private void openScorebord(object sender, RoutedEventArgs e)
 		{
+			Scoreboard scoreboard = new Scoreboard(this.parent);
+			parent.ChangeContent(scoreboard);
+		}
 
+		private void openUitleg(object sender, RoutedEventArgs e)
+		{
+			Instructies instructies = new Instructies(this.parent);
+			parent.ChangeContent(instructies);
 		}
 	}
 }

@@ -7,9 +7,11 @@ namespace periode_1_gebruikersinteractie_groep_6.Windows
 	/// </summary>
 	public partial class Instructies : UserControl
 	{
-		public Instructies()
+		private ContentControl parent;
+		public Instructies(ContentControl parent)
 		{
-			InitializeComponent();
-		}
+            InitializeComponent();
+            this.parent = parent;
+        }
 	}
 }
