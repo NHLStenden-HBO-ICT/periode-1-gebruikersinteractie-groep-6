@@ -7,7 +7,14 @@
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
   </PropertyGroup>
+
   <ItemGroup>
+    <None Remove="Assets\Background 2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Background 2.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Assets\Power-Button.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
