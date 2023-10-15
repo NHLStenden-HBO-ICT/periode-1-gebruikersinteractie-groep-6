@@ -3,11 +3,11 @@
 namespace periode_1_gebruikersinteractie_groep_6.Windows
 {
 	/// <summary>
-	/// Interaction logic for Instructies.xaml
+	/// Interaction logic for instellingenUI.xaml
 	/// </summary>
-	public partial class Instructies : UserControl
+	public partial class instellingenUI : UserControl
 	{
-		public Instructies()
+		public instellingenUI()
 		{
 			InitializeComponent();
 		}
