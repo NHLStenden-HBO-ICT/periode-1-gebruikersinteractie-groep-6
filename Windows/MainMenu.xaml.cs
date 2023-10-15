@@ -1,4 +1,5 @@
-﻿using System;
+﻿using periode_1_gebruikersinteractie_groep_6.Windows;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,12 @@ namespace periode_1_gebruikersinteractie_groep_6
         public MainMenu()
         {
             InitializeComponent();
+        }
+
+        private void openInstellingenUI(object sender, RoutedEventArgs e)
+        {
+            instellingenUI instellingenUI = new instellingenUI();
+            instellingenUI.Show();
         }
     }
 }
