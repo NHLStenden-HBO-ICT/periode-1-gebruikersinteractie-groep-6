@@ -7,7 +7,8 @@
 	mc:Ignorable="d"
     d:DesignHeight="{x:Static SystemParameters.PrimaryScreenHeight}" 
 	d:DesignWidth="{x:Static SystemParameters.PrimaryScreenWidth}" Background="White">
-	<Grid>
+	
+    <Grid>
 		<Grid.RowDefinitions>
 			<RowDefinition Height="*"/>
 			<RowDefinition Height="2*"/>
@@ -20,10 +21,8 @@
 			<Grid Margin="8">
 				<Grid.RowDefinitions>
 					<RowDefinition Height="64"/>
-					<RowDefinition Height="2*"/>
-					<RowDefinition Height="*"/>
-					<RowDefinition Height="*"/>
-					<RowDefinition Height="0.5*"/>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="0.5*"/>
 				</Grid.RowDefinitions>
 				<Grid.ColumnDefinitions>
 					<ColumnDefinition Width="64"/>
@@ -36,13 +35,22 @@
 							<Setter Property="CornerRadius" Value="5"/>
 						</Style>
 					</Button.Resources>
-				</Button>
-				<Label Grid.Row="1" Foreground="#1f1f1f" Grid.Column="1" Content="#1 Racer" HorizontalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="72" FontWeight="Bold"/>
-				<Label Grid.Row="2" Foreground="#1f1f1f" Grid.Column="1" Content="Gerben" HorizontalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="48"/>
-				<Label Grid.Row="3" Foreground="#1f1f1f" Grid.Column="1" Content="06:09.420" HorizontalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="48"/>
-				<Image Grid.ColumnSpan="3" Grid.RowSpan="5" Source="../Assets/crown.png" RenderOptions.BitmapScalingMode="NearestNeighbor" Panel.ZIndex="-1" Opacity="0.5"/>
 				
-			</Grid>
+                </Button>
+                <Viewbox StretchDirection="Both" Stretch="Uniform" Grid.Row="1" Grid.Column="1">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="2*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Label Grid.Row="0" Foreground="#1f1f1f" Grid.Column="1" Content="#1 Racer" HorizontalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="180" FontWeight="Bold"/>
+                    <Label Grid.Row="1" Foreground="#1f1f1f" Grid.Column="1" Content="Gerben" HorizontalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="140"/>
+                    <Label Grid.Row="2" Foreground="#1f1f1f" Grid.Column="1" Content="06:09.420" HorizontalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="105"/>
+                    <Image Grid.ColumnSpan="3" Grid.RowSpan="5" Source="../Assets/crown.png" RenderOptions.BitmapScalingMode="NearestNeighbor" Panel.ZIndex="-1" Opacity="0.5"/>
+                    </Grid>
+                </Viewbox>
+            </Grid>
 		</Border>
 		<ScrollViewer Grid.Row="1" Grid.Column="1" VerticalAlignment="Top" VerticalScrollBarVisibility="Auto" Margin="10">
 			<StackPanel x:Name="stackPanelVistaProfiloTessera" Margin="0,0,0,4" >

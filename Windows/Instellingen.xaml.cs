@@ -7,9 +7,11 @@ namespace periode_1_gebruikersinteractie_groep_6.Windows
 	/// </summary>
 	public partial class instellingenUI : UserControl
 	{
-		public instellingenUI()
+		private ContentControl parent;
+		public instellingenUI(ContentControl parent)
 		{
-			InitializeComponent();
-		}
+            InitializeComponent();
+            this.parent = parent;
+        }
 	}
 }

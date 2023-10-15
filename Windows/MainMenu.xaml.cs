@@ -1,6 +1,7 @@
 ﻿using periode_1_gebruikersinteractie_groep_6.Windows;
 using System.Windows;
 using System.Windows.Controls;
+using periode_1_gebruikersinteractie_groep_6.Logic;
 
 namespace periode_1_gebruikersinteractie_groep_6
 {
@@ -14,17 +15,25 @@ namespace periode_1_gebruikersinteractie_groep_6
 		{
 			InitializeComponent();
 			this.parent = parent;
+			Helpers.PlayMusic("music.wav");
 		}
 
 		private void openInstellingenUI(object sender, RoutedEventArgs e)
 		{
-			instellingenUI instellingenUI = new instellingenUI();
+			instellingenUI instellingenUI = new instellingenUI(this.parent);
 			parent.Content = instellingenUI;
 		}
 
 		private void openScorebord(object sender, RoutedEventArgs e)
 		{
-
+			Scoreboard scoreboard = new Scoreboard(this.parent);
+			parent.Content = scoreboard;
 		}
-	}
+
+        private void openUitleg(object sender, RoutedEventArgs e)
+        {
+			Instructies instructies = new Instructies(this.parent);
+			parent.Content = instructies;
+        }
+    }
 }
