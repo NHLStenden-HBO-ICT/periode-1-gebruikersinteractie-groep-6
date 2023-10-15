@@ -23,7 +23,7 @@ namespace periode_1_gebruikersinteractie_groep_6.Windows
 
 		private void HandleKeyPress(object sender, System.Windows.Input.KeyEventArgs e)
 		{
-			parent.Content = new MainMenu();
+			parent.Content = new MainMenu(this.parent);
 		}
 	}
 }
