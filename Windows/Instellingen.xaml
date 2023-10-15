@@ -4,7 +4,8 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        d:DesignHeight="{x:Static SystemParameters.PrimaryScreenHeight}" d:DesignWidth="{x:Static SystemParameters.PrimaryScreenWidth}">
+        d:DesignHeight="{x:Static SystemParameters.PrimaryScreenHeight}" d:DesignWidth="{x:Static SystemParameters.PrimaryScreenWidth}" 
+			 Background="White">
 
     <Viewbox StretchDirection="Both" Stretch="Uniform">
         <Grid>
@@ -195,7 +196,7 @@
                     Height="80"/>
             </Button>
 
-            <Button Margin="20, 0, 0, 20" 
+			<Button Margin="20, 0, 0, 20" 
                     Content="X" 
                     Width="80" 
                     Height="80" 
@@ -203,19 +204,16 @@
                     FontWeight="Bold" 
                     Grid.Column="6"
                     Grid.ColumnSpan="3">
-                <Button.Resources>
-                    <Style 
+				<Button.Resources>
+					<Style 
                         TargetType="{x:Type Border}">
-                        <Setter 
+						<Setter 
                             Property="CornerRadius" Value="5"/>
-                    </Style>
-                </Button.Resources>
-            </Button>
-
-
-
-        </Grid>
+					</Style>
+				</Button.Resources>
+			</Button>
+		</Grid>
     </Viewbox>
-</Window>
+</UserControl>
 
 

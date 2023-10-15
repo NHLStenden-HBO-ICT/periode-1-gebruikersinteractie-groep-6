@@ -1,37 +1,30 @@
 ﻿using periode_1_gebruikersinteractie_groep_6.Windows;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace periode_1_gebruikersinteractie_groep_6
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
-    public partial class MainMenu : Window
-    {
-    	private ContentControl parent;
-        public MainMenu(ContentControl parent)
-        {
-            InitializeComponent();
-	    this.parent = parent;
-        }
+	/// <summary>
+	/// Interaction logic for MainWindow.xaml
+	/// </summary>
+	public partial class MainMenu : UserControl
+	{
+		private ContentControl parent;
+		public MainMenu(ContentControl parent)
+		{
+			InitializeComponent();
+			this.parent = parent;
+		}
 
-        private void openInstellingenUI(object sender, RoutedEventArgs e)
-        {
-            instellingenUI instellingenUI = new instellingenUI();
-	    parent.Content = instellingenUI;
-        }
-    }
+		private void openInstellingenUI(object sender, RoutedEventArgs e)
+		{
+			instellingenUI instellingenUI = new instellingenUI();
+			parent.Content = instellingenUI;
+		}
+
+		private void openScorebord(object sender, RoutedEventArgs e)
+		{
+
+		}
+	}
 }
