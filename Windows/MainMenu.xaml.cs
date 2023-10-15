@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ﻿using periode_1_gebruikersinteractie_groep_6.Windows;
 using System;
 using System.Collections.Generic;
@@ -22,31 +21,17 @@ namespace periode_1_gebruikersinteractie_groep_6
     /// </summary>
     public partial class MainMenu : Window
     {
-        public MainMenu()
+    	private ContentControl parent;
+        public MainMenu(ContentControl parent)
         {
             InitializeComponent();
+	    this.parent = parent;
         }
 
         private void openInstellingenUI(object sender, RoutedEventArgs e)
         {
             instellingenUI instellingenUI = new instellingenUI();
-            instellingenUI.Show();
+	    parent.Content = instellingenUI;
         }
     }
-=======
-﻿using System.Windows.Controls;
-
-namespace periode_1_gebruikersinteractie_groep_6
-{
-	/// <summary>
-	/// Interaction logic for MainWindow.xaml
-	/// </summary>
-	public partial class MainMenu : UserControl
-	{
-		public MainMenu()
-		{
-			InitializeComponent();
-		}
-	}
->>>>>>> bea85c915036684602afc4533ca104234e514dc1
 }
