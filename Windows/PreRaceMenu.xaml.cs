@@ -18,5 +18,11 @@ namespace periode_1_gebruikersinteractie_groep_6.Windows
 		{
 			parent.ChangeContent(new MainMenu(parent));
 		}
-	}
+
+        private void openMainMenu(object sender, System.Windows.RoutedEventArgs e)
+        {
+			MainMenu mainMenu = new MainMenu(this.parent);
+			parent.ChangeContent(mainMenu);
+        }
+    }
 }
