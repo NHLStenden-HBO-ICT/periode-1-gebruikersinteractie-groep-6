@@ -37,7 +37,7 @@ using System.IO;
 
         public static void SetVolume(float volume)
         {
-            musicVolume = volume;
+        musicVolume = volume;
         currentMusic.Volume = !musicMuted ? volume : 0;
         }
     }
