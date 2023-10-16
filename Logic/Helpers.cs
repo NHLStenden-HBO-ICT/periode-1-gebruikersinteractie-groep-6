@@ -1,43 +1,43 @@
 ﻿using System;
-using System.Windows.Media;
 using System.IO;
+using System.Windows.Media;
 
-    public class Helpers
-    {
-        public static MediaPlayer currentMusic;
+namespace periode_1_gebruikersinteractie_groep_6
+{
+	public class Helpers
+	{
+		public static MediaPlayer currentMusic;
+		public static bool musicMuted = false;
+		public static float musicVolume = 1;
 
-        public static void PlayMusic(string path)
-        {
-            if (currentMusic != null)
-            {
-                currentMusic.Stop();
-                currentMusic.Close();
-                currentMusic = null;
-            }
+		public static void PlayMusic(string path)
+		{
+			if (currentMusic != null)
+			{
+				currentMusic.Stop();
+				currentMusic.Close();
+				currentMusic = null;
+			}
 
-            currentMusic = new MediaPlayer();
-            currentMusic.Open(new Uri(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Assets", path)));
-            currentMusic.Play();
-        }
+			currentMusic = new MediaPlayer();
+			currentMusic.Open(new Uri(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Assets", path)));
+			currentMusic.Play();
+		}
 
-        // bovenaan
-        public static bool musicMuted = false;
-        public static float musicVolume = 1;
+		public static void Mute(bool? toMute)
+		{
+			if (toMute == null)
+			{
+				toMute = !musicMuted;
+			}
 
-    // bij de functies
-    public static void Mute(bool? toMute)
-    {
-        if (toMute == null)
-        {
-            toMute = !musicMuted;
-        }
+			currentMusic.Volume = (bool)toMute ? 0 : musicVolume;
+		}
 
-        currentMusic.Volume = (bool)toMute ? 0 : musicVolume;
-        }
-
-        public static void SetVolume(float volume)
-        {
-        musicVolume = volume;
-        currentMusic.Volume = !musicMuted ? volume : 0;
-        }
-    }
+		public static void SetVolume(float volume)
+		{
+			musicVolume = volume;
+			currentMusic.Volume = !musicMuted ? volume : 0;
+		}
+	}
+}

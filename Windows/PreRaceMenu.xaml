@@ -115,7 +115,7 @@
             Grid.Column="5"
             Grid.Row="4">
             <TextBlock 
-                Text="PLAYER 2:"
+                Text="PLAYER 23:"
                 FontWeight="SemiBold"
                 HorizontalAlignment="Center"
                 FontSize="40" />
