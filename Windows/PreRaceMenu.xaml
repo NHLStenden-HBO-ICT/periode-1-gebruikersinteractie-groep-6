@@ -110,38 +110,48 @@
 				Height="50"
 				FontSize="40" />
 		</StackPanel>
-		<Button
-			x:Name="gereedButton1"
+		<Viewbox
 			Grid.Row="5"
 			Grid.Column="2"
-			Width="300"
-			Height="75"
-			Margin="0,10,0,10"
-			Background="#B1B1B1"
-			Content="GEREED"
-			FontSize="48"
-			FontWeight="SemiBold" />
-		<Button
-			x:Name="gereedButton2"
+			Stretch="Uniform">
+			<Button
+				x:Name="gereedButton1"
+				Width="300"
+				Height="75"
+				Margin="0,10,0,10"
+				Background="#B1B1B1"
+				Content="GEREED"
+				FontSize="48"
+				FontWeight="SemiBold" />
+		</Viewbox>
+		<Viewbox
 			Grid.Row="5"
 			Grid.Column="5"
-			Width="300"
-			Height="75"
-			Margin="0,10,0,10"
-			Background="#B1B1B1"
-			Content="GEREED"
-			FontSize="48"
-			FontWeight="SemiBold" />
-		<Button
-			x:Name="menuButton"
+			Stretch="Uniform">
+			<Button
+				x:Name="gereedButton2"
+				Grid.Row="5"
+				Grid.Column="5"
+				Width="300"
+				Margin="0,10,0,10"
+				Background="#B1B1B1"
+				Content="GEREED"
+				FontSize="48"
+				FontWeight="SemiBold" />
+		</Viewbox>
+		<Viewbox
 			Grid.Row="6"
 			Grid.Column="3"
 			Grid.ColumnSpan="2"
-			Width="300"
-			Height="75"
-			Background="#B1B1B1"
-			Content="MENU"
-			FontSize="48"
-			FontWeight="SemiBold" Click="menuButton_Click" />
+			Stretch="Uniform">
+			<Button
+				x:Name="menuButton"
+				Width="300"
+				Background="#B1B1B1"
+				Click="menuButton_Click"
+				Content="MENU"
+				FontSize="48"
+				FontWeight="SemiBold" />
+		</Viewbox>
 	</Grid>
 </UserControl>
