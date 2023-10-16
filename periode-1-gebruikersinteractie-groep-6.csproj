@@ -25,9 +25,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Assets\music.wav">
+    <EmbeddedResource Include="Assets\music.wav">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
+    </EmbeddedResource>
   </ItemGroup>
 
   <ItemGroup>
@@ -67,5 +67,9 @@
     <Resource Include="Assets\Volume Icon.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Properties\" />
   </ItemGroup>
 </Project>

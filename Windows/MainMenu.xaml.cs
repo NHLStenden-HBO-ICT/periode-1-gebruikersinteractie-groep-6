@@ -1,7 +1,7 @@
 ﻿using periode_1_gebruikersinteractie_groep_6.Windows;
+using System;
 using System.Windows;
 using System.Windows.Controls;
-using periode_1_gebruikersinteractie_groep_6.Logic;
 
 namespace periode_1_gebruikersinteractie_groep_6
 {
@@ -10,30 +10,40 @@ namespace periode_1_gebruikersinteractie_groep_6
 	/// </summary>
 	public partial class MainMenu : UserControl
 	{
-		private ContentControl parent;
-		public MainMenu(ContentControl parent)
+		private Main parent;
+		public MainMenu(Main parent)
 		{
 			InitializeComponent();
 			this.parent = parent;
-			Helpers.PlayMusic("music.wav");
 		}
 
 		private void openInstellingenUI(object sender, RoutedEventArgs e)
 		{
 			instellingenUI instellingenUI = new instellingenUI(this.parent);
-			parent.Content = instellingenUI;
+			parent.ChangeContent(instellingenUI);
 		}
 
 		private void openScorebord(object sender, RoutedEventArgs e)
 		{
 			Scoreboard scoreboard = new Scoreboard(this.parent);
-			parent.Content = scoreboard;
+			parent.ChangeContent(scoreboard);
 		}
 
-        private void openUitleg(object sender, RoutedEventArgs e)
-        {
+		private void openUitleg(object sender, RoutedEventArgs e)
+		{
 			Instructies instructies = new Instructies(this.parent);
-			parent.Content = instructies;
-        }
-    }
+			parent.ChangeContent(instructies);
+		}
+
+		private void startButton_Click(object sender, RoutedEventArgs e)
+		{
+			PreRaceMenu preRaceMenu = new PreRaceMenu(this.parent);
+			parent.ChangeContent(preRaceMenu);
+		}
+
+		private void powerButton_Click(object sender, RoutedEventArgs e)
+		{
+			Environment.Exit(0);
+		}
+	}
 }

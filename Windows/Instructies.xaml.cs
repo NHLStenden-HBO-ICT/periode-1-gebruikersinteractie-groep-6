@@ -7,11 +7,16 @@ namespace periode_1_gebruikersinteractie_groep_6.Windows
 	/// </summary>
 	public partial class Instructies : UserControl
 	{
-		private ContentControl parent;
-		public Instructies(ContentControl parent)
+		private Main parent;
+		public Instructies(Main parent)
 		{
-            InitializeComponent();
-            this.parent = parent;
-        }
+			InitializeComponent();
+			this.parent = parent;
+		}
+
+		private void Button_Click(object sender, System.Windows.RoutedEventArgs e)
+		{
+			parent.ChangeContent(new MainMenu(parent));
+		}
 	}
 }

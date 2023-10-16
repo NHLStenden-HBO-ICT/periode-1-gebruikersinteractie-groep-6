@@ -7,9 +7,11 @@ namespace periode_1_gebruikersinteractie_groep_6.Windows
 	/// </summary>
 	public partial class Startscherm : UserControl
 	{
-		public Startscherm()
+		private Main parent;
+		public Startscherm(Main parent)
 		{
 			InitializeComponent();
+			this.parent = parent;
 		}
 	}
 }
