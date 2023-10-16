@@ -127,7 +127,9 @@
                     Minimum="0"
                     Maximum="1"
                     
-                    Value="{Binding MusicVolume, Mode=TwoWay}" ValueChanged="volumeSlider_ValueChanged" 
+                    Value="1" 
+                    ValueChanged="volumeSlider_ValueChanged"
+                    Style="{StaticResource CustomSliderStyle}"
                     
 
                 />

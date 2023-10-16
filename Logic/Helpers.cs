@@ -39,5 +39,16 @@ namespace periode_1_gebruikersinteractie_groep_6
 			musicVolume = volume;
 			currentMusic.Volume = !musicMuted ? volume : 0;
 		}
+		public static void SetVolume(double volume)
+		{
+            if (currentMusic != null)
+			{ 
+				musicVolume = (float)volume;
+				if (!musicMuted)
+				{
+					currentMusic.Volume = volume;
+				}
+			}
+        }
 	}
 }
