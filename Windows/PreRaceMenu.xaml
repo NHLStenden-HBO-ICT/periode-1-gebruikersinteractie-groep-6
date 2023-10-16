@@ -9,7 +9,7 @@
     <Grid>
         <Grid.Background>
             <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
-                <GradientStop Offset="0.01" Color="#FFFFBF6C" />
+                <GradientStop Offset="0.01" Color="#FFD22D2D" />
                 <GradientStop Offset="0.24" Color="#FFFFB34F" />
             </LinearGradientBrush>
         </Grid.Background>
@@ -32,23 +32,37 @@
             <RowDefinition Height="auto" />
             <RowDefinition Height="auto" />
             <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
             <RowDefinition Height="20" />
         </Grid.RowDefinitions>
 
-        <Grid 
-            Grid.Column="2"
-            Grid.Row="3" 
-            Margin="30,0,30,0">
-            <Image Grid.Column="2"
-               HorizontalAlignment="Left"
-               Width="80"
-               Height="80"
-               Source="/Assets/Back Button.png" />
-            <Image Grid.Column="0" 
-               HorizontalAlignment="Right"
-               Width="80"
-               Height="80"
-               Source="/Assets/Next Button.png" />
+
+        <Grid Grid.Column="2" Grid.Row="3" Margin="30,15,30,15">
+            <Button Width="80" Height="60" HorizontalAlignment="Left">
+
+                <Button.Effect>
+                    <DropShadowEffect BlurRadius="2" ShadowDepth="0" />
+                </Button.Effect>
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="10" />
+                        <Setter Property="Background" Value="White" />
+                    </Style>
+                </Button.Resources>
+            </Button>
+
+            <Button Width="80" Height="60" HorizontalAlignment="Right">
+
+                <Button.Effect>
+                    <DropShadowEffect BlurRadius="2" ShadowDepth="0" />
+                </Button.Effect>
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="10" />
+                        <Setter Property="Background" Value="White" />
+                    </Style>
+                </Button.Resources>
+            </Button>
         </Grid>
         
         <Image Grid.Column="2" 
@@ -57,7 +71,7 @@
                Height="auto" 
                Source="/Assets/Car Placeholder.png" Stretch="Fill"/>
 
-        <Grid Grid.Column="5" Grid.Row="3">
+        <Grid Grid.Column="5" Grid.Row="3" Margin="30,0,30,0">
             <Button Width="80" Height="60" HorizontalAlignment="Left">
 
                 <Button.Effect>
