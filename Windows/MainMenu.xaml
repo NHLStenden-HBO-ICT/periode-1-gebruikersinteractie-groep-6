@@ -50,7 +50,7 @@
 				Content="START"
 				FontSize="42"
 				FontWeight="Bold"
-				Foreground="#1f1f1f" />
+				Foreground="#1f1f1f" Click="startButton_Click" />
 			<Button
 				x:Name="scorebordButton"
 				Width="280"
@@ -92,7 +92,8 @@
 			Width="100"
 			Height="100"
 			HorizontalAlignment="Left"
-			VerticalAlignment="Bottom">
+			VerticalAlignment="Bottom"
+			Click="powerButton_Click">
 			<Image Source="/Assets/Power-Button.png" />
 		</Button>
 		<Button

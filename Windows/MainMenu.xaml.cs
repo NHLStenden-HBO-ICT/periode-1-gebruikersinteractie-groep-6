@@ -1,4 +1,5 @@
 ﻿using periode_1_gebruikersinteractie_groep_6.Windows;
+using System;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -32,6 +33,17 @@ namespace periode_1_gebruikersinteractie_groep_6
 		{
 			Instructies instructies = new Instructies(this.parent);
 			parent.ChangeContent(instructies);
+		}
+
+		private void startButton_Click(object sender, RoutedEventArgs e)
+		{
+			PreRaceMenu preRaceMenu = new PreRaceMenu(this.parent);
+			parent.ChangeContent(preRaceMenu);
+		}
+
+		private void powerButton_Click(object sender, RoutedEventArgs e)
+		{
+			Environment.Exit(0);
 		}
 	}
 }

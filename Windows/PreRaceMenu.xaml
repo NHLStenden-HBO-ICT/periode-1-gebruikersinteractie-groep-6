@@ -142,6 +142,6 @@
 			Background="#B1B1B1"
 			Content="MENU"
 			FontSize="48"
-			FontWeight="SemiBold" />
+			FontWeight="SemiBold" Click="menuButton_Click" />
 	</Grid>
 </UserControl>
