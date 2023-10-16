@@ -2,6 +2,8 @@
 using System;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
+using YourNamespace;
 
 namespace periode_1_gebruikersinteractie_groep_6
 {
@@ -35,7 +37,7 @@ namespace periode_1_gebruikersinteractie_groep_6
 			parent.ChangeContent(instructies);
 		}
 
-		private void startButton_Click(object sender, RoutedEventArgs e)
+		private void openPostRaceMenu(object sender, RoutedEventArgs e)
 		{
 			PreRaceMenu preRaceMenu = new PreRaceMenu(this.parent);
 			parent.ChangeContent(preRaceMenu);
@@ -44,6 +46,24 @@ namespace periode_1_gebruikersinteractie_groep_6
 		private void powerButton_Click(object sender, RoutedEventArgs e)
 		{
 			Environment.Exit(0);
-		}
-	}
+        }
+
+        private void MuteButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (Helpers.currentMusic != null)
+            {
+				Helpers.Mute(null);
+
+                if (Helpers.musicMuted)
+                {
+                    muteButton.Content = "Unmute";
+                }
+                else
+                {
+                    muteButton.Content = "Mute";
+                }
+            }
+        }
+
+    }
 }

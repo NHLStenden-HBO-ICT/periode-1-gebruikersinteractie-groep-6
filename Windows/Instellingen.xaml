@@ -9,35 +9,42 @@
 	Background="White"
 	mc:Ignorable="d">
 
-	<Viewbox Stretch="Uniform" StretchDirection="Both">
-		<Grid>
-			<Grid.RowDefinitions>
-				<RowDefinition Height="174" />
-				<RowDefinition Height="68*" />
-				<RowDefinition Height="111*" />
-				<RowDefinition Height="128*" />
-				<RowDefinition Height="128*" />
-				<RowDefinition Height="20" />
-			</Grid.RowDefinitions>
-			<Grid.ColumnDefinitions>
-				<ColumnDefinition Width="100" />
-				<ColumnDefinition Width="100" />
-				<ColumnDefinition Width="226*" />
-				<ColumnDefinition Width="420*" />
-				<ColumnDefinition Width="720*" />
-				<ColumnDefinition Width="201*" />
-				<ColumnDefinition Width="313*" />
-				<ColumnDefinition Width="100" />
-				<ColumnDefinition Width="100" />
-			</Grid.ColumnDefinitions>
-			<Border
+    <Grid>
+              <Grid.Background>
+            <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                <GradientStop Offset="0.01" Color="#FFFFBF6C" />
+                <GradientStop Offset="0.24" Color="#FFFFB34F" />
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Viewbox Stretch="Uniform" StretchDirection="Both">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="174" />
+                    <RowDefinition Height="68*" />
+                    <RowDefinition Height="111*" />
+                    <RowDefinition Height="128*" />
+                    <RowDefinition Height="128*" />
+                    <RowDefinition Height="20" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100" />
+                    <ColumnDefinition Width="100" />
+                    <ColumnDefinition Width="226*" />
+                    <ColumnDefinition Width="420*" />
+                    <ColumnDefinition Width="720*" />
+                    <ColumnDefinition Width="201*" />
+                    <ColumnDefinition Width="313*" />
+                    <ColumnDefinition Width="100" />
+                    <ColumnDefinition Width="100" />
+                </Grid.ColumnDefinitions>
+                <Border
 				x:Name="instellingenAchtergrond"
 				Grid.Row="1"
 				Grid.Column="3"
 				Margin="30,8,30,8"
 				Background="#ffb34f"
 				CornerRadius="40" />
-			<TextBlock
+                <TextBlock
 				Grid.Row="1"
 				Grid.Column="3"
 				Height="122"
@@ -46,9 +53,10 @@
 				FontSize="100"
 				FontWeight="Bold"
 				Foreground="#1f1f1f"
+
 				Text="INSTELLINGEN"
 				TextAlignment="Center" />
-			<TextBlock
+                <TextBlock
 				Grid.Row="2"
 				Grid.Column="2"
 				Width="257"
@@ -61,14 +69,14 @@
 				Foreground="#1f1f1f"
 				Text="MUZIEK"
 				TextAlignment="Left" />
-			<Slider
+                <Slider
 				Grid.Row="2"
 				Grid.Column="3"
 				Width="700"
 				Height="18"
 				HorizontalAlignment="Center"
 				VerticalAlignment="Center" />
-			<TextBlock
+                <TextBlock
 				Grid.Row="3"
 				Grid.Column="2"
 				Width="304"
@@ -82,14 +90,14 @@
 				Foreground="#1f1f1f"
 				Text="EFFECTEN"
 				TextAlignment="Left" />
-			<Slider
+                <Slider
 				Grid.Row="3"
 				Grid.Column="3"
 				Width="700"
 				Height="18"
 				HorizontalAlignment="Center"
 				VerticalAlignment="Center" />
-			<TextBlock
+                <TextBlock
 				Grid.Row="4"
 				Grid.Column="2"
 				Width="275"
@@ -102,14 +110,14 @@
 				Foreground="#1f1f1f"
 				Text="VOLUME"
 				TextAlignment="Left" />
-			<Slider
+                <Slider
 				Grid.Row="4"
 				Grid.Column="3"
 				Width="700"
 				Height="18"
 				HorizontalAlignment="Center"
 				VerticalAlignment="Center" />
-			<Button
+                <Button
 				x:Name="muteButtonGeluid"
 				Grid.Row="2"
 				Grid.Column="4"
@@ -118,18 +126,18 @@
 				Margin="101,61,0,61"
 				HorizontalAlignment="Left"
 				Background="#b1b1b1">
-				<Button.Resources>
-					<Style TargetType="Border">
-						<Setter Property="CornerRadius" Value="10" />
-					</Style>
-				</Button.Resources>
-				<Image
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="10" />
+                        </Style>
+                    </Button.Resources>
+                    <Image
 					Width="80"
 					Height="80"
 					Source="./Assets/instellingenUIAssets/muteButton.png"
 					Stretch="Fill" />
-			</Button>
-			<Button
+                </Button>
+                <Button
 				x:Name="muteButtonEffecten"
 				Grid.Row="3"
 				Grid.Column="4"
@@ -138,17 +146,17 @@
 				Margin="101,78,0,78"
 				HorizontalAlignment="Left"
 				Background="#b1b1b1">
-				<Button.Resources>
-					<Style TargetType="Border">
-						<Setter Property="CornerRadius" Value="10" />
-					</Style>
-				</Button.Resources>
-				<Image
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="10" />
+                        </Style>
+                    </Button.Resources>
+                    <Image
 					Width="80"
 					Height="80"
 					Source="./Assets/instellingenUIAssets/muteButton.png" />
-			</Button>
-			<Button
+                </Button>
+                <Button
 				x:Name="muteButtonVolume"
 				Grid.Row="4"
 				Grid.Column="4"
@@ -156,18 +164,18 @@
 				Height="100"
 				Margin="101,78,0,78"
 				Background="#b1b1b1">
-				<Button.Resources>
-					<Style TargetType="Border">
-						<Setter Property="CornerRadius" Value="10" />
-					</Style>
-				</Button.Resources>
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="10" />
+                        </Style>
+                    </Button.Resources>
 
-				<Image
+                    <Image
 					Width="80"
 					Height="80"
 					Source="./Assets/instellingenUIAssets/muteButton.png" />
-			</Button>
-			<Button
+                </Button>
+                <Button
 				Grid.Column="6"
 				Grid.ColumnSpan="3"
 				Width="80"
@@ -176,14 +184,15 @@
 				Content="X"
 				FontSize="36"
 				FontWeight="Bold" Click="Button_Click">
-				<Button.Resources>
-					<Style TargetType="{x:Type Border}">
-						<Setter Property="CornerRadius" Value="5" />
-					</Style>
-				</Button.Resources>
-			</Button>
-		</Grid>
-	</Viewbox>
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5" />
+                        </Style>
+                    </Button.Resources>
+                </Button>
+            </Grid>
+        </Viewbox>
+    </Grid>
 </UserControl>
 
 
