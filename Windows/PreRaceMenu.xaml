@@ -49,10 +49,28 @@
                         <Setter Property="Background" Value="White" />
                     </Style>
                 </Button.Resources>
+                <Viewbox
+                    Margin="8"
+                    Stretch="Uniform"
+                    StretchDirection="DownOnly">
+                    <Image
+                        Width="auto"
+                        Height="auto"
+                        RenderTransformOrigin="0.5,0.5"
+                        Source="../Assets/arrow_key.png">
+                        <Image.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform />
+                                <SkewTransform />
+                                <RotateTransform Angle="-90" />
+                                <TranslateTransform />
+                            </TransformGroup>
+                        </Image.RenderTransform>
+                    </Image>
+                </Viewbox>
             </Button>
 
             <Button Width="80" Height="60" HorizontalAlignment="Right">
-
                 <Button.Effect>
                     <DropShadowEffect BlurRadius="2" ShadowDepth="0" />
                 </Button.Effect>
@@ -62,6 +80,25 @@
                         <Setter Property="Background" Value="White" />
                     </Style>
                 </Button.Resources>
+                <Viewbox
+                Margin="8"
+                Stretch="Uniform"
+                StretchDirection="DownOnly">
+                    <Image
+	            Width="auto"
+	            Height="auto"
+	            RenderTransformOrigin="0.5,0.5"
+	            Source="../Assets/arrow_key.png">
+                        <Image.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform />
+                                <SkewTransform />
+                                <RotateTransform Angle="90.007" />
+                                <TranslateTransform />
+                            </TransformGroup>
+                        </Image.RenderTransform>
+                    </Image>
+                </Viewbox>
             </Button>
         </Grid>
         
@@ -83,6 +120,25 @@
                         <Setter Property="Background" Value="White" />
                     </Style>
                 </Button.Resources>
+                <Viewbox
+                    Margin="8"
+                    Stretch="Uniform"
+                    StretchDirection="DownOnly">
+                    <Image
+                        Width="auto"
+                        Height="auto"
+                        RenderTransformOrigin="0.5,0.5"
+                        Source="../Assets/arrow_key.png">       
+                        <Image.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform />
+                                <SkewTransform />
+                                <RotateTransform Angle="-90" />
+                                <TranslateTransform />
+                            </TransformGroup>
+                        </Image.RenderTransform>
+                    </Image>
+                </Viewbox>
             </Button>
 
             <Button Width="80" Height="60" HorizontalAlignment="Right">
@@ -96,6 +152,25 @@
                         <Setter Property="Background" Value="White" />
                     </Style>
                 </Button.Resources>
+                <Viewbox
+	                Margin="8"
+	                Stretch="Uniform"
+	                StretchDirection="DownOnly">
+                    <Image
+		            Width="auto"
+		            Height="auto"
+		            RenderTransformOrigin="0.5,0.5"
+		            Source="../Assets/arrow_key.png">
+                        <Image.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform />
+                                <SkewTransform />
+                                <RotateTransform Angle="90.007" />
+                                <TranslateTransform />
+                            </TransformGroup>
+                        </Image.RenderTransform>
+                    </Image>
+                </Viewbox>
             </Button>
         </Grid>
 
@@ -112,7 +187,7 @@
             Grid.Column="2"
             Grid.Row="4">
             <TextBlock 
-                Text="PLAYER 1:"
+                Text="SPELER 1:"
                 FontWeight="SemiBold"
                 HorizontalAlignment="Center"
                 FontSize="40" />
@@ -129,7 +204,7 @@
             Grid.Column="5"
             Grid.Row="4">
             <TextBlock 
-                Text="PLAYER 23:"
+                Text="SPELER 2:"
                 FontWeight="SemiBold"
                 HorizontalAlignment="Center"
                 FontSize="40" />
