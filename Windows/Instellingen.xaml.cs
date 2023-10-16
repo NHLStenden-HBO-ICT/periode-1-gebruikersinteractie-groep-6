@@ -1,4 +1,5 @@
-﻿using System.Windows.Controls;
+﻿using System.Windows;
+using System.Windows.Controls;
 
 namespace periode_1_gebruikersinteractie_groep_6.Windows
 {
@@ -7,11 +8,21 @@ namespace periode_1_gebruikersinteractie_groep_6.Windows
 	/// </summary>
 	public partial class instellingenUI : UserControl
 	{
-		private ContentControl parent;
-		public instellingenUI(ContentControl parent)
+		private Main parent;
+		public instellingenUI(Main parent)
 		{
-            InitializeComponent();
-            this.parent = parent;
-        }
+			InitializeComponent();
+			this.parent = parent;
+		}
+
+		private void ReturnButton_Click(object sender, System.Windows.RoutedEventArgs e)
+		{
+			parent.ChangeContent(new MainMenu(parent));
+		}
+
+		private void volumeSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+		{
+			Helpers.SetVolume(e.NewValue);
+		}
 	}
 }
