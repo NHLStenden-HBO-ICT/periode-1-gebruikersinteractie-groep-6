@@ -160,7 +160,7 @@
 			Height="100"
 			HorizontalAlignment="Right"
 			VerticalAlignment="Bottom">
-			<Image Source="/Assets/Volume Icon.png" />
+			<Image x:Name="muteImage" Source="/Assets/Volume Icon.png" />
 		</Button>
 	</Grid>
 </UserControl>
