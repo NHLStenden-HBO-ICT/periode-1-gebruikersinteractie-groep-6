@@ -2,15 +2,13 @@
 using System;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Input;
-using YourNamespace;
 
 namespace periode_1_gebruikersinteractie_groep_6
 {
-	/// <summary>
-	/// Interaction logic for MainWindow.xaml
-	/// </summary>
-	public partial class MainMenu : UserControl
+    /// <summary>
+    /// Interaction logic for MainWindow.xaml
+    /// </summary>
+    public partial class MainMenu : UserControl
 	{
 		private Main parent;
 		public MainMenu(Main parent)

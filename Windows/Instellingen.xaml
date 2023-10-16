@@ -75,7 +75,10 @@
 				Width="700"
 				Height="18"
 				HorizontalAlignment="Center"
-				VerticalAlignment="Center" />
+				VerticalAlignment="Center" 
+                Minimum="0"
+                Maximum="100"
+                Value="100"/>
                 <TextBlock
 				Grid.Row="3"
 				Grid.Column="2"
@@ -96,7 +99,10 @@
 				Width="700"
 				Height="18"
 				HorizontalAlignment="Center"
-				VerticalAlignment="Center" />
+				VerticalAlignment="Center" 
+                    Minimum="0"
+                    Maximum="100"
+                    Value="100"/>
                 <TextBlock
 				Grid.Row="4"
 				Grid.Column="2"
@@ -111,12 +117,20 @@
 				Text="VOLUME"
 				TextAlignment="Left" />
                 <Slider
+                    x:Name="volumeSlider"
 				Grid.Row="4"
 				Grid.Column="3"
 				Width="700"
 				Height="18"
 				HorizontalAlignment="Center"
-				VerticalAlignment="Center" />
+				VerticalAlignment="Center" 
+                    Minimum="0"
+                    Maximum="1"
+                    
+                    Value="{Binding MusicVolume, Mode=TwoWay}" ValueChanged="volumeSlider_ValueChanged" 
+                    
+
+                />
                 <Button
 				x:Name="muteButtonGeluid"
 				Grid.Row="2"
@@ -134,7 +148,7 @@
                     <Image
 					Width="80"
 					Height="80"
-					Source="./Assets/instellingenUIAssets/muteButton.png"
+					Source="../Assets/instellingenUIAssets/muteButton.png"
 					Stretch="Fill" />
                 </Button>
                 <Button
@@ -154,7 +168,7 @@
                     <Image
 					Width="80"
 					Height="80"
-					Source="./Assets/instellingenUIAssets/muteButton.png" />
+					Source="../Assets/instellingenUIAssets/muteButton.png" />
                 </Button>
                 <Button
 				x:Name="muteButtonVolume"
@@ -164,6 +178,7 @@
 				Height="100"
 				Margin="101,78,0,78"
 				Background="#b1b1b1">
+                    
                     <Button.Resources>
                         <Style TargetType="Border">
                             <Setter Property="CornerRadius" Value="10" />
@@ -173,7 +188,7 @@
                     <Image
 					Width="80"
 					Height="80"
-					Source="./Assets/instellingenUIAssets/muteButton.png" />
+					Source="../Assets/instellingenUIAssets/muteButton.png" />
                 </Button>
                 <Button
 				Grid.Column="6"
@@ -183,7 +198,7 @@
 				Margin="20,0,0,20"
 				Content="X"
 				FontSize="36"
-				FontWeight="Bold" Click="Button_Click">
+				FontWeight="Bold" Click="ReturnButton_Click">
                     <Button.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="CornerRadius" Value="5" />

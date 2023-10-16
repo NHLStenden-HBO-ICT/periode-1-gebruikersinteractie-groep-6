@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Windows.Media;
 using System.IO;
+using System.Windows.Controls;
+using System.Windows;
 
     public class Helpers
     {
@@ -34,10 +36,19 @@ using System.IO;
 
         currentMusic.Volume = (bool)toMute ? 0 : musicVolume;
         }
-
-        public static void SetVolume(float volume)
+    public static void SetVolume(double volume)
+    {
+        if (currentMusic != null)
         {
-        musicVolume = volume;
-        currentMusic.Volume = !musicMuted ? volume : 0;
+            musicVolume = (float)volume;
+            if (!musicMuted)
+            {
+                currentMusic.Volume = volume;
+            }
         }
     }
+
+
+
+    }
+
