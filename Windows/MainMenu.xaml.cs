@@ -44,15 +44,15 @@ namespace periode_1_gebruikersinteractie_groep_6
 		private void powerButton_Click(object sender, RoutedEventArgs e)
 		{
 			Environment.Exit(0);
-        }
+		}
 
         private void MuteButton_Click(object sender, RoutedEventArgs e)
         {
             if (Helpers.currentMusic != null)
             {
-				Helpers.Mute(null);
+                Helpers.currentMusic.IsMuted = !Helpers.currentMusic.IsMuted;
 
-                if (Helpers.musicMuted)
+                if (Helpers.currentMusic.IsMuted)
                 {
                     muteButton.Content = "Unmute";
                 }
