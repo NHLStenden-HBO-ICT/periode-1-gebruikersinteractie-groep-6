@@ -1,27 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+﻿using System.Windows.Controls;
 
 namespace periode_1_gebruikersinteractie_groep_6.Windows
 {
-    /// <summary>
-    /// Interaction logic for PreRaceMenu.xaml
-    /// </summary>
-    public partial class PreRaceMenu : Window
-    {
-        public PreRaceMenu()
-        {
-            InitializeComponent();
-        }
-    }
+	/// <summary>
+	/// Interaction logic for PreRaceMenu.xaml
+	/// </summary>
+	public partial class PreRaceMenu : UserControl
+	{
+		private Main parent;
+		public PreRaceMenu(Main parent)
+		{
+			InitializeComponent();
+			this.parent = parent;
+		}
+
+		private void menuButton_Click(object sender, System.Windows.RoutedEventArgs e)
+		{
+			parent.ChangeContent(new MainMenu(parent));
+		}
+	}
 }
