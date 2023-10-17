@@ -1,5 +1,4 @@
-﻿using periode_1_gebruikersinteractie_groep_6.Logic;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
 
 namespace periode_1_gebruikersinteractie_groep_6.Windows
@@ -18,7 +17,7 @@ namespace periode_1_gebruikersinteractie_groep_6.Windows
 			Helpers.PlayMusic("music.wav");
 		}
 
-		private void Opscreen_Loaded(object sender, System.Windows.RoutedEventArgs e)
+		public void Listen()
 		{
 			var window = Window.GetWindow(this);
 			window.KeyDown += HandleKeyPress;

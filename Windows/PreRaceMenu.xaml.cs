@@ -24,5 +24,11 @@ namespace periode_1_gebruikersinteractie_groep_6.Windows
 			MainMenu mainMenu = new MainMenu(this.parent);
 			parent.ChangeContent(mainMenu);
         }
+
+        private void openPostRaceMenu(object sender, System.Windows.RoutedEventArgs e)
+        {
+			PostRaceMenu postRaceMenu = new PostRaceMenu(this.parent);
+			parent.ChangeContent(postRaceMenu);
+        }
     }
 }

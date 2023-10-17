@@ -8,7 +8,7 @@ namespace periode_1_gebruikersinteractie_groep_6
 	{
 		public static MediaPlayer currentMusic;
 		public static bool musicMuted = false;
-		public static float musicVolume = 1;
+		public static double musicVolume = 1;
 
 		public static void PlayMusic(string path)
 		{
@@ -34,10 +34,16 @@ namespace periode_1_gebruikersinteractie_groep_6
 			currentMusic.Volume = (bool)toMute ? 0 : musicVolume;
 		}
 
-		public static void SetVolume(float volume)
+		public static void SetVolume(double volume)
 		{
-			musicVolume = volume;
-			currentMusic.Volume = !musicMuted ? volume : 0;
+			if (currentMusic != null)
+			{
+				musicVolume = volume;
+				if (!musicMuted)
+				{
+					currentMusic.Volume = volume;
+				}
+			}
 		}
 		public static void SetVolume(double volume)
 		{

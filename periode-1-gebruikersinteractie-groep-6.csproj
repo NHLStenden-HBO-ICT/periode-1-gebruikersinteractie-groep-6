@@ -9,22 +9,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Assets\arrow.png" />
-    <None Remove="Assets\arrow_key.png" />
-    <None Remove="Assets\Back Button.png" />
-    <None Remove="Assets\Background 2.jpg" />
-    <None Remove="Assets\Car Placeholder.png" />
-    <None Remove="Assets\crown.png" />
-    <None Remove="Assets\game_logo.png" />
-    <None Remove="Assets\instellingenUIAssets\muteButton.png" />
-    <None Remove="Assets\music.wav" />
-    <None Remove="Assets\Next Button.png" />
-    <None Remove="Assets\Power-Button.png" />
-    <None Remove="Assets\TempLogo.png" />
-    <None Remove="Assets\Volume Icon.png" />
-  </ItemGroup>
-
-  <ItemGroup>
     <EmbeddedResource Include="Assets\music.wav">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
@@ -43,6 +27,9 @@
     <Resource Include="Assets\Background 2.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Assets\game_bg.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Assets\Car Placeholder.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
@@ -53,6 +40,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Assets\instellingenUIAssets\muteButton.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\mute.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Assets\Next Button.png">

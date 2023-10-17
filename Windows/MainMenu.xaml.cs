@@ -5,10 +5,10 @@ using System.Windows.Controls;
 
 namespace periode_1_gebruikersinteractie_groep_6
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
-    public partial class MainMenu : UserControl
+	/// <summary>
+	/// Interaction logic for MainWindow.xaml
+	/// </summary>
+	public partial class MainMenu : UserControl
 	{
 		private Main parent;
 		public MainMenu(Main parent)
@@ -46,22 +46,22 @@ namespace periode_1_gebruikersinteractie_groep_6
 			Environment.Exit(0);
 		}
 
-        private void MuteButton_Click(object sender, RoutedEventArgs e)
-        {
-            if (Helpers.currentMusic != null)
-            {
-                Helpers.currentMusic.IsMuted = !Helpers.currentMusic.IsMuted;
+		private void MuteButton_Click(object sender, RoutedEventArgs e)
+		{
+			if (Helpers.currentMusic != null)
+			{
+				Helpers.currentMusic.IsMuted = !Helpers.currentMusic.IsMuted;
 
-                if (Helpers.currentMusic.IsMuted)
-                {
-                    muteButton.Content = "Unmute";
-                }
-                else
-                {
-                    muteButton.Content = "Mute";
-                }
-            }
-        }
+				if (Helpers.currentMusic.IsMuted)
+				{
+					muteButton.Content = "Unmute";
+				}
+				else
+				{
+					muteButton.Content = "Mute";
+				}
+			}
+		}
 
-    }
+	}
 }

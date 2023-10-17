@@ -1,6 +1,5 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Input;
 
 namespace periode_1_gebruikersinteractie_groep_6.Windows
 {
@@ -21,11 +20,9 @@ namespace periode_1_gebruikersinteractie_groep_6.Windows
 			parent.ChangeContent(new MainMenu(parent));
 		}
 
-        private void volumeSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
-        {
+		private void volumeSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+		{
 			Helpers.SetVolume(e.NewValue);
-        }
-        }
-    }
-    
-
+		}
+	}
+}

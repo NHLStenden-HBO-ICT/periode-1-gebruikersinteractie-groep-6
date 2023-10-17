@@ -23,6 +23,7 @@ namespace periode_1_gebruikersinteractie_groep_6.Windows
 			timer.Tick += (sender, args) =>
 			{
 				timer.Stop();
+				opscreen.Listen();
 				ChangeContent(Startscherm);
 			};
 		}
