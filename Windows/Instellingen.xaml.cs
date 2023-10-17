@@ -24,5 +24,6 @@ namespace periode_1_gebruikersinteractie_groep_6.Windows
 		{
 			Helpers.SetVolume(e.NewValue);
 		}
+
 	}
 }
