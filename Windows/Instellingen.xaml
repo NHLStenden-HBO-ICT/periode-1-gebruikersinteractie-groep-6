@@ -175,11 +175,83 @@
 					Margin="101,78,0,78"
 					Background="#b1b1b1">
 
-					<Button.Resources>
-						<Style TargetType="Border">
-							<Setter Property="CornerRadius" Value="10" />
-						</Style>
-					</Button.Resources>
+				Text="INSTELLINGEN"
+				TextAlignment="Center" />
+                <TextBlock
+				Grid.Row="2"
+				Grid.Column="2"
+				Width="257"
+				Height="92"
+				HorizontalAlignment="Left"
+				VerticalAlignment="Center"
+				FontFamily="Calibri"
+				FontSize="75"
+				FontWeight="Bold"
+				Foreground="#1f1f1f"
+				Text="MUZIEK"
+				TextAlignment="Left" />
+                <Slider
+				Grid.Row="2"
+				Grid.Column="3"
+				Width="700"
+				Height="18"
+				HorizontalAlignment="Center"
+				VerticalAlignment="Center" 
+                Minimum="0"
+                Maximum="100"
+                Value="100"/>
+                <TextBlock
+				Grid.Row="3"
+				Grid.Column="2"
+				Width="304"
+				Height="92"
+				Margin="0,0,50,0"
+				HorizontalAlignment="Left"
+				VerticalAlignment="Center"
+				FontFamily="Calibri"
+				FontSize="75"
+				FontWeight="Bold"
+				Foreground="#1f1f1f"
+				Text="EFFECTEN"
+				TextAlignment="Left" />
+                <Slider
+				Grid.Row="3"
+				Grid.Column="3"
+				Width="700"
+				Height="18"
+				HorizontalAlignment="Center"
+				VerticalAlignment="Center" 
+                    Minimum="0"
+                    Maximum="100"
+                    Value="100"/>
+                <TextBlock
+				Grid.Row="4"
+				Grid.Column="2"
+				Width="275"
+				Height="92"
+				HorizontalAlignment="Left"
+				VerticalAlignment="Center"
+				FontFamily="Calibri"
+				FontSize="75"
+				FontWeight="Bold"
+				Foreground="#1f1f1f"
+				Text="VOLUME"
+				TextAlignment="Left" />
+                <Slider
+                    x:Name="volumeSlider"
+				Grid.Row="4"
+				Grid.Column="3"
+				Width="700"
+				Height="18"
+				HorizontalAlignment="Center"
+				VerticalAlignment="Center" 
+                    Minimum="0"
+                    Maximum="1"
+                    
+                    Value="1" 
+                    ValueChanged="volumeSlider_ValueChanged"
+                    Style="{StaticResource CustomSliderStyle}"
+                    
 
 					<Image
 						Width="80"

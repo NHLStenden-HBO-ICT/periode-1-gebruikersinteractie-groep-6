@@ -19,5 +19,9 @@
 		<Style TargetType="ContentControl">
 			<Setter Property="FontFamily" Value="./Fonts/#Raleway"/>
 		</Style>
+        <Style x:Key="CustomSliderStyle" TargetType="Slider">
+            <Setter Property="IsMoveToPointEnabled" Value="True"/>
+
+        </Style>
 	</Application.Resources>
 </Application>
