@@ -31,18 +31,19 @@
 			<RowDefinition Height="auto" />
 			<RowDefinition Height="20" />
 		</Grid.RowDefinitions>
-       
-        <TextBlock
-			Grid.Row="1"
-			Grid.Column="2"
-			Margin="0,200,0,0"
+
+        <Viewbox Grid.Row="1"
+		Grid.Column="2">
+            <TextBlock
+			Margin="0,200,0,50"
 			HorizontalAlignment="Center"
 			VerticalAlignment="Top"
-			FontSize="70"
+			FontSize="40"
 			FontWeight="Bold"
 			Foreground="#1f1f1f"
 			Text="COOL RACE SPEL" >
         </TextBlock>
+        </Viewbox>
 
 
         <StackPanel

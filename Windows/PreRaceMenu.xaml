@@ -262,7 +262,7 @@
 			</Button.Resources>
 		</Button>
 
-		<Button
+        <Button
 			x:Name="gereedButton2"
 			Grid.Row="5"
 			Grid.Column="5"
@@ -288,7 +288,7 @@
 			Grid.Row="6"
 			Grid.Column="3"
 			Grid.ColumnSpan="2"
-			Width="auto "
+			Width="auto"
 			Stretch="Uniform">
 			<Button
 				x:Name="menuButton"
@@ -296,7 +296,8 @@
 				Background="#B1B1B1"
 				Click="openMainMenu"
 				Content="MENU"
-				FontSize="48"
+				FontSize="64"
+                Width="370"
 				FontWeight="SemiBold" Padding="20">
 				<Button.Effect>
 					<DropShadowEffect BlurRadius="2" ShadowDepth="0" />
