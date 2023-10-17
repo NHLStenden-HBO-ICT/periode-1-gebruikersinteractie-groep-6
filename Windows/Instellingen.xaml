@@ -37,13 +37,6 @@
                     <ColumnDefinition Width="100" />
                     <ColumnDefinition Width="100" />
                 </Grid.ColumnDefinitions>
-                <Border
-					x:Name="instellingenAchtergrond"
-					Grid.Row="1"
-					Grid.Column="3"
-					Margin="30,8,30,8"
-					Background="#ffb34f"
-					CornerRadius="40" />
                 <TextBlock
 					Grid.Row="1"
 					Grid.Column="3"
@@ -77,7 +70,8 @@
 					VerticalAlignment="Center"
 					Maximum="1"
 					Minimum="0"
-					ValueChanged="volumeSlider_ValueChanged"
+					ValueChanged="muziekSlider_ValueChanged"
+                    Style="{StaticResource CustomSliderStyle}"
 					Value="0.5" />
                 <TextBlock
 					Grid.Row="3"
@@ -102,6 +96,7 @@
 					VerticalAlignment="Center"
 					Maximum="1"
 					Minimum="0"
+					Style="{StaticResource CustomSliderStyle}"
 					Value="0.5" />
                 <TextBlock
 					Grid.Row="4"
@@ -117,20 +112,23 @@
 					Text="VOLUME"
 					TextAlignment="Left" />
                 <Button
-					x:Name="muteButtonGeluid"
+					x:Name="muteButtonMuziek"
 					Grid.Row="2"
 					Grid.Column="4"
 					Width="100"
 					Height="100"
 					Margin="101,61,0,61"
 					HorizontalAlignment="Left"
-					Background="#b1b1b1">
+					Background="#b1b1b1"
+                    Click="MuteButtonMuziek_Click">
+                    
                     <Button.Resources>
                         <Style TargetType="Border">
                             <Setter Property="CornerRadius" Value="10" />
                         </Style>
                     </Button.Resources>
                     <Image
+                        Name="muteImg"
 						Width="80"
 						Height="80"
 						Source="../Assets/instellingenUIAssets/muteButton.png"
@@ -229,7 +227,6 @@
                     Maximum="1"
                     
                     Value="0.5" 
-                    ValueChanged="volumeSlider_ValueChanged"
                     Style="{StaticResource CustomSliderStyle}"/>
                 <Button
 					Grid.Column="6"

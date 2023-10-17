@@ -34,14 +34,14 @@ namespace periode_1_gebruikersinteractie_groep_6
 			currentMusic.Volume = (bool)toMute ? 0 : musicVolume;
 		}
 
-		public static void SetVolume(double volume)
+		public static void SetMuziek(double muziek)
 		{
 			if (currentMusic != null)
 			{
-				musicVolume = volume;
+				musicVolume = muziek;
 				if (!musicMuted)
 				{
-					currentMusic.Volume = volume;
+					currentMusic.Volume = muziek;
 				}
 			}
 		}
