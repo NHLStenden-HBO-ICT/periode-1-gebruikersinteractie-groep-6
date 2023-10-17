@@ -15,12 +15,6 @@ namespace periode_1_gebruikersinteractie_groep_6.Windows
 			this.parent = parent;
 		}
 
-		private void openMainMenu(object sender, RoutedEventArgs e)
-		{
-			instellingenUI instellingenUI = new instellingenUI(this.parent);
-			parent.ChangeContent(instellingenUI);
-		}
-
 		private void openScoreboard(object sender, RoutedEventArgs e)
 		{
 			Scoreboard scoreboard = new Scoreboard(this.parent);
@@ -29,9 +23,15 @@ namespace periode_1_gebruikersinteractie_groep_6.Windows
 
 		private void openPreRaceMenu(object sender, RoutedEventArgs e)
 		{
-			PreRaceMenu PreRaceMenu = new PreRaceMenu(this.parent);
-			parent.ChangeContent(PreRaceMenu);
+			PreRaceMenu preRaceMenu = new PreRaceMenu(this.parent);
+			parent.ChangeContent(preRaceMenu);
 		}
-	}
+
+        private void openMainMenu(object sender, RoutedEventArgs e)
+        {
+			MainMenu mainMenu = new MainMenu(this.parent);
+			parent.ChangeContent(mainMenu);
+        }
+    }
 }
 
