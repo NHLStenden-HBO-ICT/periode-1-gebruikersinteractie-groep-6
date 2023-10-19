@@ -250,7 +250,7 @@
 			Background="#B1B1B1"
 			Content="GEREED"
 			FontSize="48"
-			FontWeight="SemiBold">
+			FontWeight="SemiBold" Click="openGameSimulation">
 			<Button.Effect>
 				<DropShadowEffect BlurRadius="2" ShadowDepth="0" />
 			</Button.Effect>

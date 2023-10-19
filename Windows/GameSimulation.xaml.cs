@@ -20,9 +20,12 @@ namespace periode_1_gebruikersinteractie_groep_6.Windows
     /// </summary>
     public partial class GameSimulation : UserControl
     {
-        public GameSimulation()
+        private Main parent;
+        public GameSimulation(Main parent)
         {
             InitializeComponent();
+            this.parent = parent;
         }
+
     }
 }

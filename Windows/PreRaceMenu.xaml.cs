@@ -30,5 +30,16 @@ namespace periode_1_gebruikersinteractie_groep_6.Windows
 			PostRaceMenu postRaceMenu = new PostRaceMenu(this.parent);
 			parent.ChangeContent(postRaceMenu);
         }
+
+        private void usernameTextBox1_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void openGameSimulation(object sender, System.Windows.RoutedEventArgs e)
+        {
+			GameSimulation gameSimulation = new GameSimulation(this.parent);
+			parent.ChangeContent(gameSimulation);
+        }
     }
 }
