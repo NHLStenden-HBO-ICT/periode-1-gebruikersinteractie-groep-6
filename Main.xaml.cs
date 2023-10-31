@@ -18,7 +18,7 @@ namespace periode_1_gebruikersinteractie_groep_6.Windows
 			Startscherm Startscherm = new Startscherm(this);
 			ChangeContent(opscreen);
 
-			var timer = new DispatcherTimer { Interval = TimeSpan.FromSeconds(3) };
+			var timer = new DispatcherTimer { Interval = TimeSpan.FromSeconds(1) };
 			timer.Start();
 			timer.Tick += (sender, args) =>
 			{

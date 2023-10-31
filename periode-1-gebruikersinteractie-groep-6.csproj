@@ -9,15 +9,34 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Assets\LeftSideRacingCircuit.png" />
-    <None Remove="Assets\RightSideRacingCircuit.png" />
+    <None Remove="Assets\cars\car\images\blue.png" />
+    <None Remove="Assets\cars\car\images\green.png" />
+    <None Remove="Assets\cars\car\images\purple.png" />
+    <None Remove="Assets\cars\car\images\red.png" />
+    <None Remove="Assets\cars\car\images\yellow.png" />
+    <None Remove="Assets\cars\normal\images\blue.png" />
+    <None Remove="Assets\cars\normal\images\green.png" />
+    <None Remove="Assets\cars\normal\images\purple.png" />
+    <None Remove="Assets\cars\normal\images\red.png" />
+    <None Remove="Assets\cars\normal\images\yellow.png" />
+    <None Remove="Assets\cars\race\images\blue.png" />
+    <None Remove="Assets\cars\race\images\green.png" />
+    <None Remove="Assets\cars\race\images\purple.png" />
+    <None Remove="Assets\cars\race\images\red.png" />
+    <None Remove="Assets\cars\race\images\yellow.png" />
+    <None Remove="Assets\cars\sport\images\blue.png" />
+    <None Remove="Assets\cars\sport\images\green.png" />
+    <None Remove="Assets\cars\sport\images\purple.png" />
+    <None Remove="Assets\cars\sport\images\red.png" />
+    <None Remove="Assets\cars\sport\images\yellow.png" />
+    <None Remove="Assets\cars\truck\images\blue.png" />
+    <None Remove="Assets\cars\truck\images\green.png" />
+    <None Remove="Assets\cars\truck\images\purple.png" />
+    <None Remove="Assets\cars\truck\images\red.png" />
+    <None Remove="Assets\cars\truck\images\yellow.png" />
+    <None Remove="Assets\music.wav" />
   </ItemGroup>
 
-  <ItemGroup>
-    <EmbeddedResource Include="Assets\music.wav">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-  </ItemGroup>
 
   <ItemGroup>
     <Resource Include="Assets\arrow.png">
@@ -47,9 +66,87 @@
     <Resource Include="Assets\instellingenUIAssets\muteButton.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Assets\LeftSideRacingCircuit.png">
+    <EmbeddedResource Include="Assets\cars\car\images\blue.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assets\cars\car\images\green.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assets\cars\car\images\purple.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assets\cars\car\images\red.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assets\cars\car\images\yellow.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assets\cars\normal\images\blue.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assets\cars\normal\images\green.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assets\cars\normal\images\yellow.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assets\cars\normal\images\purple.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assets\cars\normal\images\red.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assets\cars\race\images\blue.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assets\cars\race\images\green.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assets\cars\race\images\purple.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assets\cars\race\images\red.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assets\cars\race\images\yellow.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assets\cars\sport\images\blue.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assets\cars\sport\images\green.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assets\cars\sport\images\purple.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assets\cars\sport\images\red.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assets\cars\sport\images\yellow.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assets\cars\truck\images\blue.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assets\cars\truck\images\green.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assets\cars\truck\images\purple.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assets\cars\truck\images\red.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assets\cars\truck\images\yellow.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assets\LeftSideRacingCircuit.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assets\music.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
     <Resource Include="Assets\mute.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
@@ -59,9 +156,9 @@
     <Resource Include="Assets\Power-Button.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Assets\RightSideRacingCircuit.png">
+    <EmbeddedResource Include="Assets\RightSideRacingCircuit.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
+    </EmbeddedResource>
     <Resource Include="Assets\TempLogo.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>

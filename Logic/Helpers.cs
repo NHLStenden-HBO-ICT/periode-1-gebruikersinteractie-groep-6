@@ -14,7 +14,7 @@ namespace periode_1_gebruikersinteractie_groep_6
 		public static void PlayMusic(string path)
 		{
 
-            if (currentMusic != null)
+			if (currentMusic != null)
 			{
 				currentMusic.Stop();
 				currentMusic.Close();
@@ -25,26 +25,23 @@ namespace periode_1_gebruikersinteractie_groep_6
 			currentMusic.Open(new Uri(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Assets", path)));
 			currentMusic.Play();
 
-            
+
 			currentMusic.MediaEnded += (sender, e) =>
 			{
-                currentMusic.Position = TimeSpan.Zero;
-                currentMusic.Play();
-            };	
+				currentMusic.Position = TimeSpan.Zero;
+				currentMusic.Play();
+			};
 
-            var timeLine = new MediaTimeline(new Uri(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Assets", path)));
-            timeLine.RepeatBehavior = RepeatBehavior.Forever;
-            var mediaPlayer = new MediaPlayer();
-            mediaPlayer.Clock = timeLine.CreateClock();
-            mediaPlayer.Clock.Controller.Begin();
-        }
+			var timeLine = new MediaTimeline(new Uri(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Assets", path)));
+			timeLine.RepeatBehavior = RepeatBehavior.Forever;
+			var mediaPlayer = new MediaPlayer();
+			mediaPlayer.Clock = timeLine.CreateClock();
+			mediaPlayer.Clock.Controller.Begin();
+		}
 
 		public static void Mute(bool? toMute)
 		{
-			if (toMute == null)
-			{
-				toMute = !musicMuted;
-			}
+			toMute ??= !musicMuted;
 
 			currentMusic.Volume = (bool)toMute ? 0 : musicVolume;
 		}

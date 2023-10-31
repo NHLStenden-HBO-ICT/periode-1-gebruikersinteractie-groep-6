@@ -19,27 +19,27 @@ namespace periode_1_gebruikersinteractie_groep_6.Windows
 			parent.ChangeContent(new MainMenu(parent));
 		}
 
-        private void openMainMenu(object sender, System.Windows.RoutedEventArgs e)
-        {
+		private void openMainMenu(object sender, System.Windows.RoutedEventArgs e)
+		{
 			MainMenu mainMenu = new MainMenu(this.parent);
 			parent.ChangeContent(mainMenu);
-        }
+		}
 
-        private void openPostRaceMenu(object sender, System.Windows.RoutedEventArgs e)
-        {
+		private void openPostRaceMenu(object sender, System.Windows.RoutedEventArgs e)
+		{
 			PostRaceMenu postRaceMenu = new PostRaceMenu(this.parent);
 			parent.ChangeContent(postRaceMenu);
-        }
+		}
 
-        private void usernameTextBox1_TextChanged(object sender, TextChangedEventArgs e)
-        {
+		private void usernameTextBox1_TextChanged(object sender, TextChangedEventArgs e)
+		{
 
-        }
+		}
 
-        private void openGameSimulation(object sender, System.Windows.RoutedEventArgs e)
-        {
-			GameSimulation gameSimulation = new GameSimulation(this.parent);
+		private void openGameSimulation(object sender, System.Windows.RoutedEventArgs e)
+		{
+			GameSimulation gameSimulation = new GameSimulation(this.parent, new Game.CustomizationSelection("sport", "red"), new Game.CustomizationSelection("sport", "red"));
 			parent.ChangeContent(gameSimulation);
-        }
-    }
+		}
+	}
 }
