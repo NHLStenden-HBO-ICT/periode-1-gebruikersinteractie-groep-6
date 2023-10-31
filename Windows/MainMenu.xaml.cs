@@ -35,7 +35,7 @@ namespace periode_1_gebruikersinteractie_groep_6
 			parent.ChangeContent(instructies);
 		}
 
-		private void startButton_Click(object sender, RoutedEventArgs e)
+		private void openPostRaceMenu(object sender, RoutedEventArgs e)
 		{
 			PreRaceMenu preRaceMenu = new PreRaceMenu(this.parent);
 			parent.ChangeContent(preRaceMenu);
@@ -45,5 +45,23 @@ namespace periode_1_gebruikersinteractie_groep_6
 		{
 			Environment.Exit(0);
 		}
+
+		private void MuteButton_Click(object sender, RoutedEventArgs e)
+		{
+			if (Helpers.currentMusic != null)
+			{
+				Helpers.currentMusic.IsMuted = !Helpers.currentMusic.IsMuted;
+
+				if (Helpers.currentMusic.IsMuted)
+				{
+					muteButton.Content = "Unmute";
+				}
+				else
+				{
+					muteButton.Content = "Mute";
+				}
+			}
+		}
+
 	}
 }
