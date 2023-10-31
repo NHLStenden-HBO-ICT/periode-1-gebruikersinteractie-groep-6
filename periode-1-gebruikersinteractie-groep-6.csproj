@@ -8,35 +8,6 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
-  <ItemGroup>
-    <None Remove="Assets\cars\car\images\blue.png" />
-    <None Remove="Assets\cars\car\images\green.png" />
-    <None Remove="Assets\cars\car\images\purple.png" />
-    <None Remove="Assets\cars\car\images\red.png" />
-    <None Remove="Assets\cars\car\images\yellow.png" />
-    <None Remove="Assets\cars\normal\images\blue.png" />
-    <None Remove="Assets\cars\normal\images\green.png" />
-    <None Remove="Assets\cars\normal\images\purple.png" />
-    <None Remove="Assets\cars\normal\images\red.png" />
-    <None Remove="Assets\cars\normal\images\yellow.png" />
-    <None Remove="Assets\cars\race\images\blue.png" />
-    <None Remove="Assets\cars\race\images\green.png" />
-    <None Remove="Assets\cars\race\images\purple.png" />
-    <None Remove="Assets\cars\race\images\red.png" />
-    <None Remove="Assets\cars\race\images\yellow.png" />
-    <None Remove="Assets\cars\sport\images\blue.png" />
-    <None Remove="Assets\cars\sport\images\green.png" />
-    <None Remove="Assets\cars\sport\images\purple.png" />
-    <None Remove="Assets\cars\sport\images\red.png" />
-    <None Remove="Assets\cars\sport\images\yellow.png" />
-    <None Remove="Assets\cars\truck\images\blue.png" />
-    <None Remove="Assets\cars\truck\images\green.png" />
-    <None Remove="Assets\cars\truck\images\purple.png" />
-    <None Remove="Assets\cars\truck\images\red.png" />
-    <None Remove="Assets\cars\truck\images\yellow.png" />
-    <None Remove="Assets\music.wav" />
-  </ItemGroup>
-
 
   <ItemGroup>
     <Resource Include="Assets\arrow.png">

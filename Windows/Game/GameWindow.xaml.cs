@@ -1,16 +1,15 @@
 ﻿using periode_1_gebruikersinteractie_groep_6.Logic;
-using periode_1_gebruikersinteractie_groep_6.Windows.Game;
 using System.Windows.Controls;
 
 namespace periode_1_gebruikersinteractie_groep_6.Windows
 {
 	/// <summary>
-	/// Interaction logic for GameSimulation.xaml
+	/// Interaction logic for GameWindow.xaml
 	/// </summary>
-	public partial class GameSimulation : UserControl
+	public partial class GameWindow : UserControl
 	{
 		private Main parent;
-		public GameSimulation(Main parent, CustomizationSelection p1, CustomizationSelection p2)
+		public GameWindow(Main parent, CustomizationSelection p1, CustomizationSelection p2)
 		{
 			InitializeComponent();
 			//this.parent = parent;

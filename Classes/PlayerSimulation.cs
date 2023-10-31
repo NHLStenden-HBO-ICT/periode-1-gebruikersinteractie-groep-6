@@ -1,6 +1,6 @@
 ﻿// this class simulates a player car, generaitng random speeds etc etc
 using periode_1_gebruikersinteractie_groep_6.Logic;
-using periode_1_gebruikersinteractie_groep_6.Windows.Game;
+using periode_1_gebruikersinteractie_groep_6.Windows;
 using System;
 using System.Collections.Generic;
 
