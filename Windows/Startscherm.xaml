@@ -8,7 +8,7 @@
 	d:DesignHeight="{x:Static SystemParameters.PrimaryScreenHeight}"
 	d:DesignWidth="{x:Static SystemParameters.PrimaryScreenWidth}"
 	mc:Ignorable="d">
-	<Grid Background="White">
+	<Grid Background="Black">
 		<Grid.RowDefinitions>
 			<RowDefinition Height="*" />
 			<RowDefinition Height="*" />
@@ -19,11 +19,10 @@
 			<ColumnDefinition Width="*" />
 			<ColumnDefinition Width="*" />
 		</Grid.ColumnDefinitions>
-		<Image
+		<UserControl
+			x:Name="Simulation"
 			Grid.RowSpan="3"
-			Grid.ColumnSpan="3"
-			Source="/Assets/Background 2.jpg"
-			Stretch="Fill" />
+			Grid.ColumnSpan="3" />
 		<TextBlock
 			Grid.Row="2"
 			Grid.Column="0"

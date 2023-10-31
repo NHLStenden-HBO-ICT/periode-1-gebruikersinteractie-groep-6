@@ -3,7 +3,6 @@
 	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
 	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-	xmlns:local="clr-namespace:periode_1_gebruikersinteractie_groep_6.Windows"
 	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
 	d:DesignHeight="{x:Static SystemParameters.PrimaryScreenHeight}"
 	d:DesignWidth="{x:Static SystemParameters.PrimaryScreenWidth}"
@@ -30,8 +29,8 @@
 		<Grid.RowDefinitions>
 			<RowDefinition Height="20" />
 			<RowDefinition Height="*" />
-			<RowDefinition Height="auto" />
-			<RowDefinition Height="auto" />
+			<RowDefinition Height="6*" />
+			<RowDefinition Height="2*" />
 			<RowDefinition Height="auto" />
 			<RowDefinition Height="auto" />
 			<RowDefinition Height="*" />
@@ -39,79 +38,175 @@
 			<RowDefinition Height="20" />
 		</Grid.RowDefinitions>
 
+		<Grid
+			Grid.Row="3"
+			Grid.Column="5"
+			Margin="30,15,30,15">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="0*" />
+				<ColumnDefinition />
+			</Grid.ColumnDefinitions>
 
+			<Grid Grid.Column="3">
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="1.5*" />
+					<ColumnDefinition Width="2*" />
+					<ColumnDefinition Width="1.5*" />
+				</Grid.ColumnDefinitions>
+				<Button
+					x:Name="p2Right"
+					Grid.Column="2"
+					HorizontalAlignment="Left"
+					Click="p2Right_Click">
+					<Button.Effect>
+						<DropShadowEffect BlurRadius="2" ShadowDepth="0" />
+					</Button.Effect>
+					<Button.Resources>
+						<Style TargetType="{x:Type Border}">
+							<Setter Property="CornerRadius" Value="10" />
+							<Setter Property="Background" Value="White" />
+						</Style>
+					</Button.Resources>
+					<Viewbox
+						Margin="8"
+						Stretch="Uniform"
+						StretchDirection="DownOnly">
+						<Image
+							Width="auto"
+							Height="auto"
+							RenderTransformOrigin="0.5,0.5"
+							Source="../Assets/arrow_key.png">
+							<Image.RenderTransform>
+								<TransformGroup>
+									<ScaleTransform />
+									<SkewTransform />
+									<RotateTransform Angle="90.007" />
+									<TranslateTransform />
+								</TransformGroup>
+							</Image.RenderTransform>
+						</Image>
+					</Viewbox>
+				</Button>
+				<Button
+					x:Name="p2Left"
+					Grid.Column="0"
+					HorizontalAlignment="Left"
+					Click="p2Left_Click">
+					<Button.Effect>
+						<DropShadowEffect BlurRadius="2" ShadowDepth="0" />
+					</Button.Effect>
+					<Button.Resources>
+						<Style TargetType="{x:Type Border}">
+							<Setter Property="CornerRadius" Value="10" />
+							<Setter Property="Background" Value="White" />
+						</Style>
+					</Button.Resources>
+					<Viewbox
+						Margin="8"
+						Stretch="Uniform"
+						StretchDirection="DownOnly">
+						<Image
+							Width="auto"
+							Height="auto"
+							RenderTransformOrigin="0.5,0.5"
+							Source="../Assets/arrow_key.png">
+							<Image.RenderTransform>
+								<TransformGroup>
+									<ScaleTransform />
+									<SkewTransform />
+									<RotateTransform Angle="-90" />
+									<TranslateTransform />
+								</TransformGroup>
+							</Image.RenderTransform>
+						</Image>
+					</Viewbox>
+				</Button>
+			</Grid>
+		</Grid>
 		<Grid
 			Grid.Row="3"
 			Grid.Column="2"
 			Margin="30,15,30,15">
-			<Button
-				Width="80"
-				Height="60"
-				HorizontalAlignment="Left">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="0*" />
+				<ColumnDefinition />
+			</Grid.ColumnDefinitions>
 
-				<Button.Effect>
-					<DropShadowEffect BlurRadius="2" ShadowDepth="0" />
-				</Button.Effect>
-				<Button.Resources>
-					<Style TargetType="{x:Type Border}">
-						<Setter Property="CornerRadius" Value="10" />
-						<Setter Property="Background" Value="White" />
-					</Style>
-				</Button.Resources>
-				<Viewbox
-					Margin="8"
-					Stretch="Uniform"
-					StretchDirection="DownOnly">
-					<Image
-						Width="auto"
-						Height="auto"
-						RenderTransformOrigin="0.5,0.5"
-						Source="../Assets/arrow_key.png">
-						<Image.RenderTransform>
-							<TransformGroup>
-								<ScaleTransform />
-								<SkewTransform />
-								<RotateTransform Angle="-90" />
-								<TranslateTransform />
-							</TransformGroup>
-						</Image.RenderTransform>
-					</Image>
-				</Viewbox>
-			</Button>
-
-			<Button
-				Width="80"
-				Height="60"
-				HorizontalAlignment="Right">
-				<Button.Effect>
-					<DropShadowEffect BlurRadius="2" ShadowDepth="0" />
-				</Button.Effect>
-				<Button.Resources>
-					<Style TargetType="{x:Type Border}">
-						<Setter Property="CornerRadius" Value="10" />
-						<Setter Property="Background" Value="White" />
-					</Style>
-				</Button.Resources>
-				<Viewbox
-					Margin="8"
-					Stretch="Uniform"
-					StretchDirection="DownOnly">
-					<Image
-						Width="auto"
-						Height="auto"
-						RenderTransformOrigin="0.5,0.5"
-						Source="../Assets/arrow_key.png">
-						<Image.RenderTransform>
-							<TransformGroup>
-								<ScaleTransform />
-								<SkewTransform />
-								<RotateTransform Angle="90.007" />
-								<TranslateTransform />
-							</TransformGroup>
-						</Image.RenderTransform>
-					</Image>
-				</Viewbox>
-			</Button>
+			<Grid Grid.Column="3">
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="1.5*" />
+					<ColumnDefinition Width="2*" />
+					<ColumnDefinition Width="1.5*" />
+				</Grid.ColumnDefinitions>
+				<Button
+					x:Name="p1Right"
+					Grid.Column="2"
+					HorizontalAlignment="Left"
+					Click="p1Right_Click">
+					<Button.Effect>
+						<DropShadowEffect BlurRadius="2" ShadowDepth="0" />
+					</Button.Effect>
+					<Button.Resources>
+						<Style TargetType="{x:Type Border}">
+							<Setter Property="CornerRadius" Value="10" />
+							<Setter Property="Background" Value="White" />
+						</Style>
+					</Button.Resources>
+					<Viewbox
+						Margin="8"
+						Stretch="Uniform"
+						StretchDirection="DownOnly">
+						<Image
+							Width="auto"
+							Height="auto"
+							RenderTransformOrigin="0.5,0.5"
+							Source="../Assets/arrow_key.png">
+							<Image.RenderTransform>
+								<TransformGroup>
+									<ScaleTransform />
+									<SkewTransform />
+									<RotateTransform Angle="90.007" />
+									<TranslateTransform />
+								</TransformGroup>
+							</Image.RenderTransform>
+						</Image>
+					</Viewbox>
+				</Button>
+				<Button
+					x:Name="p1Left"
+					Grid.Column="0"
+					HorizontalAlignment="Left"
+					Click="p1Left_Click">
+					<Button.Effect>
+						<DropShadowEffect BlurRadius="2" ShadowDepth="0" />
+					</Button.Effect>
+					<Button.Resources>
+						<Style TargetType="{x:Type Border}">
+							<Setter Property="CornerRadius" Value="10" />
+							<Setter Property="Background" Value="White" />
+						</Style>
+					</Button.Resources>
+					<Viewbox
+						Margin="8"
+						Stretch="Uniform"
+						StretchDirection="DownOnly">
+						<Image
+							Width="auto"
+							Height="auto"
+							RenderTransformOrigin="0.5,0.5"
+							Source="../Assets/arrow_key.png">
+							<Image.RenderTransform>
+								<TransformGroup>
+									<ScaleTransform />
+									<SkewTransform />
+									<RotateTransform Angle="-90" />
+									<TranslateTransform />
+								</TransformGroup>
+							</Image.RenderTransform>
+						</Image>
+					</Viewbox>
+				</Button>
+			</Grid>
 		</Grid>
 
 		<Image
@@ -121,81 +216,13 @@
 			Height="auto"
 			Source="/Assets/Car Placeholder.png"
 			Stretch="Fill" />
-
-		<Grid
-			Grid.Row="3"
-			Grid.Column="5"
-			Margin="30,0,30,0">
-			<Button
-				Width="80"
-				Height="60"
-				HorizontalAlignment="Left">
-
-				<Button.Effect>
-					<DropShadowEffect BlurRadius="2" ShadowDepth="0" />
-				</Button.Effect>
-				<Button.Resources>
-					<Style TargetType="{x:Type Border}">
-						<Setter Property="CornerRadius" Value="10" />
-						<Setter Property="Background" Value="White" />
-					</Style>
-				</Button.Resources>
-				<Viewbox
-					Margin="8"
-					Stretch="Uniform"
-					StretchDirection="DownOnly">
-					<Image
-						Width="auto"
-						Height="auto"
-						RenderTransformOrigin="0.5,0.5"
-						Source="../Assets/arrow_key.png">
-						<Image.RenderTransform>
-							<TransformGroup>
-								<ScaleTransform />
-								<SkewTransform />
-								<RotateTransform Angle="-90" />
-								<TranslateTransform />
-							</TransformGroup>
-						</Image.RenderTransform>
-					</Image>
-				</Viewbox>
-			</Button>
-
-			<Button
-				Width="80"
-				Height="60"
-				HorizontalAlignment="Right">
-
-				<Button.Effect>
-					<DropShadowEffect BlurRadius="2" ShadowDepth="0" />
-				</Button.Effect>
-				<Button.Resources>
-					<Style TargetType="{x:Type Border}">
-						<Setter Property="CornerRadius" Value="10" />
-						<Setter Property="Background" Value="White" />
-					</Style>
-				</Button.Resources>
-				<Viewbox
-					Margin="8"
-					Stretch="Uniform"
-					StretchDirection="DownOnly">
-					<Image
-						Width="auto"
-						Height="auto"
-						RenderTransformOrigin="0.5,0.5"
-						Source="../Assets/arrow_key.png">
-						<Image.RenderTransform>
-							<TransformGroup>
-								<ScaleTransform />
-								<SkewTransform />
-								<RotateTransform Angle="90.007" />
-								<TranslateTransform />
-							</TransformGroup>
-						</Image.RenderTransform>
-					</Image>
-				</Viewbox>
-			</Button>
-		</Grid>
+		<Viewbox
+			Grid.Row="2"
+			Grid.Column="2"
+			Margin="48"
+			Stretch="Uniform">
+			<Image x:Name="p1Image" />
+		</Viewbox>
 
 		<Image
 			Grid.Row="2"
@@ -204,6 +231,13 @@
 			Height="auto"
 			Source="/Assets/Car Placeholder.png"
 			Stretch="Fill" />
+		<Viewbox
+			Grid.Row="2"
+			Grid.Column="5"
+			Margin="48"
+			Stretch="Uniform">
+			<Image x:Name="p2Image" />
+		</Viewbox>
 
 
 		<StackPanel
@@ -220,7 +254,8 @@
 				x:Name="usernameTextBox1"
 				Width="400"
 				Height="50"
-				FontSize="40" />
+				FontSize="40" 
+				TextChanged="usernameTextBox1_TextChanged"/>
 		</StackPanel>
 
 		<StackPanel
@@ -237,20 +272,20 @@
 				x:Name="usernameTextBox2"
 				Width="400"
 				Height="50"
-				FontSize="40" />
+				FontSize="40"
+				TextChanged="usernameTextBox2_TextChanged" />
 		</StackPanel>
 
 		<Button
 			x:Name="gereedButton1"
 			Grid.Row="5"
 			Grid.Column="2"
-			Width="300"
-			Height="75"
-			Margin="0,10,0,10"
+			Margin="29,10,45,10"
 			Background="#B1B1B1"
+			Click="p1Gereed"
 			Content="GEREED"
 			FontSize="48"
-			FontWeight="SemiBold" Click="openGameSimulation">
+			FontWeight="SemiBold">
 			<Button.Effect>
 				<DropShadowEffect BlurRadius="2" ShadowDepth="0" />
 			</Button.Effect>
@@ -262,17 +297,17 @@
 			</Button.Resources>
 		</Button>
 
-        <Button
+		<Button
 			x:Name="gereedButton2"
 			Grid.Row="5"
 			Grid.Column="5"
-			Width="300"
 			Height="75"
-			Margin="0,10,0,10"
+			Margin="33,10,41,10"
 			Background="#B1B1B1"
+			Click="p2Gereed"
 			Content="GEREED"
 			FontSize="48"
-			FontWeight="SemiBold" Click="openPostRaceMenu">
+			FontWeight="SemiBold">
 			<Button.Effect>
 				<DropShadowEffect BlurRadius="2" ShadowDepth="0" />
 			</Button.Effect>
@@ -292,13 +327,14 @@
 			Stretch="Uniform">
 			<Button
 				x:Name="menuButton"
+				Width="370"
 				Margin="0,0,0,0"
+				Padding="20"
 				Background="#B1B1B1"
 				Click="openMainMenu"
 				Content="MENU"
 				FontSize="64"
-                Width="370"
-				FontWeight="SemiBold" Padding="20">
+				FontWeight="SemiBold">
 				<Button.Effect>
 					<DropShadowEffect BlurRadius="2" ShadowDepth="0" />
 				</Button.Effect>

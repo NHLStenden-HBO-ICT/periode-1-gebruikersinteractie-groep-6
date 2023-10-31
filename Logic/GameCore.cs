@@ -13,7 +13,7 @@
 using periode_1_gebruikersinteractie_groep_6.Classes;
 using System;
 using System.Collections.Generic;
-using System.Windows.Threading;
+using System.Timers;
 
 namespace periode_1_gebruikersinteractie_groep_6.Logic
 {
@@ -24,7 +24,7 @@ namespace periode_1_gebruikersinteractie_groep_6.Logic
 		// create a list containing our objects - base is the base type that all classes inherit from
 		private List<Base> objects;
 		// timer to run the gametimer
-		private DispatcherTimer gameTimer;
+		private Timer gameTimer;
 
 		public static long getTime()
 		{
@@ -37,10 +37,9 @@ namespace periode_1_gebruikersinteractie_groep_6.Logic
 			// use the new() shorthand operator to automatically initialize the list
 			objects = new();
 			lastTick = getTime();
-			gameTimer = new DispatcherTimer();
-			gameTimer.Interval = TimeSpan.FromMilliseconds(1000/60);
-			gameTimer.Tick += new EventHandler(Update);
-			gameTimer.Start();
+			gameTimer = new Timer(TimeSpan.FromMilliseconds(1000 / 60));
+			gameTimer.Elapsed += Update;
+			gameTimer.Enabled = true;
 		}
 
 		public void Update(Object sender, EventArgs e)
@@ -62,6 +61,17 @@ namespace periode_1_gebruikersinteractie_groep_6.Logic
 			objects.Add(Class);
 			Class.Start();
 			return true;
+		}
+
+		public void Stop()
+		{
+			// unload all objects, stop timer
+			foreach (Base obj in objects)
+			{
+				obj.Unload();
+			}
+
+			gameTimer.Stop();
 		}
 	}
 }
