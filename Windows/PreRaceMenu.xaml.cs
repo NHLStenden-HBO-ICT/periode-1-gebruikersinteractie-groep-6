@@ -1,9 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Media.Imaging;
-
-namespace periode_1_gebruikersinteractie_groep_6.Windows
+﻿namespace periode_1_gebruikersinteractie_groep_6.Windows
 {
 	/// <summary>
 	/// Interaction logic for PreRaceMenu.xaml
@@ -83,6 +78,24 @@ namespace periode_1_gebruikersinteractie_groep_6.Windows
 		{
 			MainMenu mainMenu = new MainMenu(this.parent);
 			parent.ChangeContent(mainMenu);
+		}
+
+		private void usernameTextBox1_TextChanged(object sender, TextChangedEventArgs e)
+		{
+			players[0].setName(usernameTextBox1.Text);
+		}
+
+		private void usernameTextBox2_TextChanged(object sender, TextChangedEventArgs e)
+		{
+			players[1].setName(usernameTextBox2.Text);
+		}
+
+		public void checkReady()
+		{
+			if (players[0].playerReady && players[1].playerReady)
+			{
+
+			}
 		}
 
 		private void usernameTextBox1_TextChanged(object sender, TextChangedEventArgs e)
