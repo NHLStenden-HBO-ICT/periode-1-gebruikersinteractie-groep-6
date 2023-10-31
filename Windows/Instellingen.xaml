@@ -142,7 +142,7 @@
 					Height="100"
 					Margin="101,78,0,78"
 					HorizontalAlignment="Left"
-					Background="#b1b1b1">
+					Background="#b1b1b2">
                     <Button.Resources>
                         <Style TargetType="Border">
                             <Setter Property="CornerRadius" Value="10" />
