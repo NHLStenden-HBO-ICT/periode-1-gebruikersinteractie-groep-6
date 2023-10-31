@@ -43,8 +43,8 @@
 			<Button
 				x:Name="MenuBtn"
 				Width="400"
-				Height="80"
 				Margin="0,0"
+				Padding="0, 10"
 				Background="#B1B1B1"
 				Click="openMainMenu"
 				Content="MENU"
@@ -72,7 +72,7 @@
 			<Button
 				x:Name="HerstartBtn"
 				Width="400"
-				Height="80"
+				Padding="0, 10"
 				Margin="0,0"
 				Background="#B1B1B1"
 				Click="openPreRaceMenu"
@@ -101,8 +101,8 @@
 			<Button
 				x:Name="ScoreboardBtn"
 				Width="600"
-				Height="80"
 				Margin="0,0"
+				Padding="0, 20"
 				Background="#B1B1B1"
 				Click="openScoreboard"
 				Content="SCOREBOARD"
@@ -135,18 +135,18 @@
 			Grid.Column="1"
 			Stretch="Uniform">
 			<TextBlock
-				Width="650"
-				Height="120"
+				Margin="2"
+				x:Name="p1Text"
 				HorizontalAlignment="Center"
 				VerticalAlignment="Center"
 				FontFamily="Raleway"
-				FontSize="100"
 				Foreground="#1f1f1f"
 				Text="SPELER 1"
 				TextAlignment="Center" />
 
 		</Viewbox>
 		<TextBlock
+			x:Name="p1Time"
 			Grid.Row="3"
 			Grid.Column="1"
 			Width="450"
@@ -173,44 +173,45 @@
 			Grid.Column="3"
 			Stretch="Uniform">
 			<TextBlock
-				Width="650"
-				Height="120"
+				Margin="2"
+				x:Name="p2Text"
 				HorizontalAlignment="Center"
 				VerticalAlignment="Center"
 				FontFamily="Raleway"
-				FontSize="100"
 				Foreground="#1f1f1f"
 				Text="SPELER 2"
 				TextAlignment="Center" />
 
 		</Viewbox>
 		<TextBlock
-				Grid.Row="3"
-				Grid.Column="3"
-				Width="450"
-				Height="80"
-				HorizontalAlignment="Center"
-				VerticalAlignment="Center"
-				FontFamily="Raleway"
-				FontSize="70"
-				Foreground="#1f1f1f"
-				Text="00:00"
-				TextAlignment="Center" />
-
-		<Viewbox
-		Grid.Row="1"
-		Grid.Column="2"
-		Stretch="Uniform">
-			<TextBlock
-			Width="600"
-			Height="100"
+			x:Name="p2Time"
+			Grid.Row="3"
+			Grid.Column="3"
+			Width="450"
+			Height="80"
 			HorizontalAlignment="Center"
 			VerticalAlignment="Center"
 			FontFamily="Raleway"
 			FontSize="70"
 			Foreground="#1f1f1f"
-			Text="SPELER X WINT!"
+			Text="00:00"
 			TextAlignment="Center" />
+
+		<Viewbox
+			Grid.Row="1"
+			Grid.Column="2"
+			Stretch="Uniform">
+			<TextBlock
+				x:Name="winText"
+				Width="600"
+				Height="100"
+				HorizontalAlignment="Center"
+				VerticalAlignment="Center"
+				FontFamily="Raleway"
+				FontSize="70"
+				Foreground="#1f1f1f"
+				Text="SPELER X WINT!"
+				TextAlignment="Center" />
 		</Viewbox>
 	</Grid>
 </UserControl>

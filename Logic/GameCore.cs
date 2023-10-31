@@ -62,5 +62,16 @@ namespace periode_1_gebruikersinteractie_groep_6.Logic
 			Class.Start();
 			return true;
 		}
+
+		public void Stop()
+		{
+			// unload all objects, stop timer
+			foreach (Base obj in objects)
+			{
+				obj.Unload();
+			}
+
+			gameTimer.Stop();
+		}
 	}
 }

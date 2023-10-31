@@ -1,5 +1,4 @@
-﻿using periode_1_gebruikersinteractie_groep_6.Classes;
-using periode_1_gebruikersinteractie_groep_6.Logic;
+﻿using periode_1_gebruikersinteractie_groep_6.Logic;
 using System;
 using System.IO;
 using System.Windows;
@@ -58,10 +57,6 @@ namespace periode_1_gebruikersinteractie_groep_6.Windows
 
 			// set car image
 			Car.Source = new BitmapImage(carConfig.carImage);
-
-			// create a new player
-			PlayerSimulation player = new PlayerSimulation(game, this);
-			game.Create(player);
 		}
 
 		public void setPosition(double pos)

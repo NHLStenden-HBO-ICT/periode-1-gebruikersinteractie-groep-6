@@ -254,7 +254,8 @@
 				x:Name="usernameTextBox1"
 				Width="400"
 				Height="50"
-				FontSize="40" />
+				FontSize="40" 
+				TextChanged="usernameTextBox1_TextChanged"/>
 		</StackPanel>
 
 		<StackPanel

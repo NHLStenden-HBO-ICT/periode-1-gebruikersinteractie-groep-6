@@ -27,7 +27,7 @@ namespace periode_1_gebruikersinteractie_groep_6.Windows
 			timer.Tick += (sender, args) =>
 			{
 				timer.Stop();
-				GameWindow GameWindow = new GameWindow(parent, p1, p2);
+				GameSimulation GameWindow = new GameSimulation(parent, p1, p2);
 				Simulation.Content = GameWindow;
 			};
 
