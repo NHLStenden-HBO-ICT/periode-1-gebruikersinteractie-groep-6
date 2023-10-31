@@ -7,7 +7,6 @@
 	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
 	d:DesignHeight="{x:Static SystemParameters.PrimaryScreenHeight}"
 	d:DesignWidth="{x:Static SystemParameters.PrimaryScreenWidth}"
-	Loaded="Opscreen_Loaded"
 	mc:Ignorable="d">
 	<Grid>
 		<Grid.RowDefinitions>

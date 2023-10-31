@@ -9,9 +9,15 @@
 	d:DesignWidth="{x:Static SystemParameters.PrimaryScreenWidth}"
 	Background="White"
 	mc:Ignorable="d">
-	<Grid Margin="20">
-		<Grid.ColumnDefinitions>
-			<ColumnDefinition Width="0.35*" />
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                <GradientStop Offset="0.01" Color="#FFFBD7A2" />
+                <GradientStop Offset="0.24" Color="#FFFFB34F" />
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+			<ColumnDefinition Width="0.5*" />
 			<ColumnDefinition Width="0.5*" />
 			<ColumnDefinition Width="0.5*" />
 			<ColumnDefinition Width="0.5*" />
@@ -19,7 +25,7 @@
 			<ColumnDefinition Width="0.5*" />
 			<ColumnDefinition Width="0.5*" />
 			<ColumnDefinition Width="0.5*" />
-			<ColumnDefinition Width="0.35*" />
+			<ColumnDefinition Width="0.5*" />
 		</Grid.ColumnDefinitions>
 		<Grid.RowDefinitions>
 			<RowDefinition Height="1.25*" />
@@ -97,7 +103,7 @@
 			Width="auto"
 			Height="auto"
 			Margin="8"
-			Background="#FFFFB34F"
+			Background="#FFD22D2D"
 			BorderBrush="Black"
 			BorderThickness="1"
 			CornerRadius="24">
@@ -139,7 +145,7 @@
 			Width="auto"
 			Height="auto"
 			Margin="8"
-			Background="#FFFFB34F"
+			Background="#FFD22D2D"
 			BorderBrush="Black"
 			BorderThickness="1"
 			CornerRadius="24">
@@ -180,7 +186,7 @@
 			Width="auto"
 			Height="auto"
 			Margin="8"
-			Background="#FFFFB34F"
+			Background="#FFD22D2D"
 			BorderBrush="Black"
 			BorderThickness="1"
 			CornerRadius="24">
@@ -240,7 +246,7 @@
 			Width="auto"
 			Height="auto"
 			Margin="8"
-			Background="#FFFFB34F"
+			Background="#FFD22D2D"
 			BorderBrush="Black"
 			BorderThickness="1"
 			CornerRadius="24">
@@ -342,7 +348,7 @@
 			Grid.Row="7"
 			Grid.Column="1"
 			Grid.ColumnSpan="3"
-			Background="#FFFFB34F"
+			Background="#FFD22D2D"
 			BorderBrush="Black"
 			BorderThickness="1"
 			CornerRadius="24">
@@ -357,7 +363,7 @@
 			Grid.Row="7"
 			Grid.Column="5"
 			Grid.ColumnSpan="3"
-			Background="#FFFFB34F"
+			Background="#FFD22D2D"
 			BorderBrush="Black"
 			BorderThickness="1"
 			CornerRadius="24">

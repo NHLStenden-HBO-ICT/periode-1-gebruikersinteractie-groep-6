@@ -10,7 +10,13 @@
 	Background="White"
 	mc:Ignorable="d">
 	<Grid>
-		<Grid.ColumnDefinitions>
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                <GradientStop Offset="0.01" Color="#FFD22D2D" />
+                <GradientStop Offset="0.24" Color="#FFFFB34F" />
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
 			<ColumnDefinition Width="20" />
 			<ColumnDefinition Width="*" />
 			<ColumnDefinition Width="auto" />
@@ -25,17 +31,22 @@
 			<RowDefinition Height="auto" />
 			<RowDefinition Height="20" />
 		</Grid.RowDefinitions>
-		<TextBlock
-			Grid.Row="1"
-			Grid.Column="2"
-			Margin="0,200,0,0"
+
+        <Viewbox Grid.Row="1"
+		Grid.Column="2">
+            <TextBlock
+			Margin="0,200,0,50"
 			HorizontalAlignment="Center"
 			VerticalAlignment="Top"
-			FontSize="50"
+			FontSize="40"
 			FontWeight="Bold"
 			Foreground="#1f1f1f"
-			Text="COOL RACE SPEL" />
-		<StackPanel
+			Text="COOL RACE SPEL" >
+        </TextBlock>
+        </Viewbox>
+
+
+        <StackPanel
 			Grid.Row="2"
 			Grid.Column="2"
 			HorizontalAlignment="Center"
@@ -46,46 +57,91 @@
 				Width="160"
 				Height="55"
 				Margin="0,10"
-				Background="#ffb34f"
+				Background="#B1B1B1"
+				Click="openPostRaceMenu"
 				Content="START"
 				FontSize="42"
 				FontWeight="Bold"
-				Foreground="#1f1f1f" Click="startButton_Click" />
-			<Button
+				Foreground="#1f1f1f">
+                <Button.Effect>
+                    <DropShadowEffect BlurRadius="2" ShadowDepth="0" />
+                </Button.Effect>
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="20" />
+                        <Setter Property="Background" Value="White" />
+                    </Style>
+                </Button.Resources>
+            </Button>
+
+            <Button
 				x:Name="scorebordButton"
 				Width="280"
 				Height="55"
 				Margin="0,10"
-				Background="#ffb34f"
+				Background="#B1B1B1"
 				Click="openScorebord"
 				Content="SCOREBORD"
 				FontSize="42"
 				FontWeight="Bold"
-				Foreground="#1f1f1f" />
-			<Button
+				Foreground="#1f1f1f">
+                <Button.Effect>
+                    <DropShadowEffect BlurRadius="2" ShadowDepth="0" />
+                </Button.Effect>
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="20" />
+                        <Setter Property="Background" Value="White" />
+                    </Style>
+                </Button.Resources>
+            </Button>
+        
+            <Button
 				x:Name="instellingenButton"
 				Width="320"
 				Height="55"
 				Margin="0,10"
-				Background="#ffb34f"
+				Background="#B1B1B1"
 				Click="openInstellingenUI"
 				Content="INSTELLINGEN"
 				FontSize="42"
 				FontWeight="Bold"
-				Foreground="#1f1f1f" />
-			<Button
+				Foreground="#1f1f1f">
+                <Button.Effect>
+                    <DropShadowEffect BlurRadius="2" ShadowDepth="0" />
+                </Button.Effect>
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="10" />
+                        <Setter Property="Background" Value="White" />
+                    </Style>
+                </Button.Resources>
+            </Button>
+
+            <Button
 				x:Name="uitlegButton"
 				Width="200"
 				Height="55"
 				Margin="0,10"
-				Background="#ffb34f"
+				Background="#B1B1B1"
 				Click="openUitleg"
 				Content="UITLEG"
 				FontSize="42"
 				FontWeight="Bold"
-				Foreground="#1f1f1f" />
-		</StackPanel>
-		<Button
+				Foreground="#1f1f1f">
+                <Button.Effect>
+                    <DropShadowEffect BlurRadius="2" ShadowDepth="0" />
+                </Button.Effect>
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="10" />
+                        <Setter Property="Background" Value="White" />
+                    </Style>
+                </Button.Resources>
+           </Button>
+            
+        </StackPanel>
+		<ToggleButton
 			Name="powerButton"
 			Grid.Row="3"
 			Grid.Column="1"
@@ -95,16 +151,17 @@
 			VerticalAlignment="Bottom"
 			Click="powerButton_Click">
 			<Image Source="/Assets/Power-Button.png" />
-		</Button>
+		</ToggleButton>
 		<Button
-			Name="volumeButton"
+			Name="muteButton"
+            Click="MuteButton_Click"
 			Grid.Row="3"
 			Grid.Column="3"
 			Width="100"
 			Height="100"
 			HorizontalAlignment="Right"
 			VerticalAlignment="Bottom">
-			<Image Source="/Assets/Volume Icon.png" />
+			<Image x:Name="muteImage" Source="/Assets/Volume Icon.png" />
 		</Button>
 	</Grid>
 </UserControl>
