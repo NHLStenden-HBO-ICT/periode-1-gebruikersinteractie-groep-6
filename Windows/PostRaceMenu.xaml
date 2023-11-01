@@ -92,35 +92,6 @@
 			</Button>
 		</StackPanel>
 
-		<StackPanel
-			Grid.Row="5"
-			Grid.Column="2"
-			HorizontalAlignment="Center"
-			VerticalAlignment="Center"
-			Orientation="Vertical">
-			<Button
-				x:Name="ScoreboardBtn"
-				Width="600"
-				Margin="0,0"
-				Padding="0, 20"
-				Background="#B1B1B1"
-				Click="openScoreboard"
-				Content="SCOREBOARD"
-				FontSize="42"
-				FontWeight="Bold"
-				Foreground="#1f1f1f">
-				<Button.Effect>
-					<DropShadowEffect BlurRadius="0" ShadowDepth="0" />
-				</Button.Effect>
-				<Button.Resources>
-					<Style TargetType="{x:Type Border}">
-						<Setter Property="CornerRadius" Value="20" />
-						<Setter Property="Background" Value="White" />
-					</Style>
-				</Button.Resources>
-			</Button>
-		</StackPanel>
-
 		<Border
 			x:Name="Speler1"
 			Grid.Row="2"

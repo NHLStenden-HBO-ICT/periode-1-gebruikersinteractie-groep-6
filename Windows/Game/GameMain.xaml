@@ -32,23 +32,82 @@
 				<RowDefinition Height="*" />
 				<RowDefinition Height="5*" />
 			</Grid.RowDefinitions>
-			<Viewbox Grid.Column="1" Grid.Row="1" Stretch="Uniform" x:Name="Light1" Visibility="Hidden">
-				<Ellipse
-					Stroke="LightGreen"
-					StrokeThickness="4" />
+			<Border
+				Grid.ColumnSpan="7"
+				Height="30"
+				Background="#FFFFB34F"
+				CornerRadius="8" />
+			<Canvas Height="40">
+				<Grid
+					x:Name="p1BarData"
+					Height="40"
+					VerticalAlignment="Center">
+					<Viewbox VerticalAlignment="Center" Stretch="Uniform">
+
+						<Ellipse Fill="Red" Stroke="Red" />
+					</Viewbox>
+					<Viewbox VerticalAlignment="Center" Stretch="Uniform">
+						<TextBlock Margin="5" Text="P1" />
+					</Viewbox>
+				</Grid>
+			</Canvas>
+			<Canvas Height="40">
+				<Grid
+					x:Name="p2BarData"
+					Height="40"
+					VerticalAlignment="Center">
+					<Viewbox VerticalAlignment="Center" Stretch="Uniform">
+
+						<Ellipse Fill="Blue" Stroke="Blue" />
+					</Viewbox>
+					<Viewbox VerticalAlignment="Center" Stretch="Uniform">
+						<TextBlock Margin="5" Text="P2" />
+					</Viewbox>
+				</Grid>
+			</Canvas>
+			<Viewbox
+				Grid.Row="1"
+				Grid.ColumnSpan="7"
+				VerticalAlignment="Top"
+				Stretch="Uniform">
+				<Label
+					x:Name="timeTracker"
+					Margin="12"
+					HorizontalAlignment="Center"
+					Foreground="White" />
 			</Viewbox>
-			<Viewbox Grid.Column="3" Grid.Row="1" Stretch="Uniform" x:Name="Light2" Visibility="Hidden">
-				<Ellipse
-					Stroke="LightGreen"
-					StrokeThickness="4" />
+
+
+			<Viewbox
+				x:Name="Light1"
+				Grid.Row="1"
+				Grid.Column="1"
+				Stretch="Uniform"
+				Visibility="Hidden">
+				<Ellipse Stroke="LightGreen" StrokeThickness="4" />
 			</Viewbox>
-			<Viewbox Grid.Column="5" Grid.Row="1" Stretch="Uniform" x:Name="Light3" Visibility="Hidden">
-				<Ellipse
-					Stroke="LightGreen"
-					StrokeThickness="4" />
+			<Viewbox
+				x:Name="Light2"
+				Grid.Row="1"
+				Grid.Column="3"
+				Stretch="Uniform"
+				Visibility="Hidden">
+				<Ellipse Stroke="LightGreen" StrokeThickness="4" />
+			</Viewbox>
+			<Viewbox
+				x:Name="Light3"
+				Grid.Row="1"
+				Grid.Column="5"
+				Stretch="Uniform"
+				Visibility="Hidden">
+				<Ellipse Stroke="LightGreen" StrokeThickness="4" />
 			</Viewbox>
 
 		</Grid>
+		<UserControl
+			x:Name="pausemenu"
+			Grid.ColumnSpan="3"
+			Panel.ZIndex="20" />
 		<Viewbox
 			Grid.Column="0"
 			HorizontalAlignment="Right"

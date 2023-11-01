@@ -25,6 +25,7 @@ namespace periode_1_gebruikersinteractie_groep_6.Logic
 		private List<Base> objects;
 		// timer to run the gametimer
 		private Timer gameTimer;
+		public bool paused;
 
 		public static long getTime()
 		{
@@ -52,7 +53,10 @@ namespace periode_1_gebruikersinteractie_groep_6.Logic
 			// call update on all objects
 			foreach (Base obj in objects)
 			{
-				obj.Update(dt);
+				if (!paused) // doing it like this instead of stopping the timer so dt doesnt jump
+				{
+					obj.Update(dt);
+				}
 			}
 		}
 		public bool Create(Base Class)
@@ -72,6 +76,11 @@ namespace periode_1_gebruikersinteractie_groep_6.Logic
 			}
 
 			gameTimer.Stop();
+		}
+
+		public void Pause(bool? paused)
+		{
+			this.paused = paused ?? !this.paused;
 		}
 	}
 }

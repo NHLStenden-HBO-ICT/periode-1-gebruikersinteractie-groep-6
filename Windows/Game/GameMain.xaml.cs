@@ -1,9 +1,12 @@
 ﻿using periode_1_gebruikersinteractie_groep_6.Classes;
 using periode_1_gebruikersinteractie_groep_6.Logic;
+using periode_1_gebruikersinteractie_groep_6.Windows.Game;
 using System;
 using System.Collections.Generic;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
+using System.Windows.Media;
 
 namespace periode_1_gebruikersinteractie_groep_6.Windows
 {
@@ -34,6 +37,10 @@ namespace periode_1_gebruikersinteractie_groep_6.Windows
 			InitializeComponent();
 			this.parent = parent;
 
+			// ease music
+			double oldVolume = Helpers.currentMusic.Volume;
+			Helpers.EaseTo(Helpers.currentMusic, 0.5f, oldVolume / 3, parent.Dispatcher);
+
 			// setup gametimer
 			GameCore game = new();
 			PlayerView player1 = new PlayerView("Left", p1.customizationData, game);
@@ -43,13 +50,18 @@ namespace periode_1_gebruikersinteractie_groep_6.Windows
 			P2.Content = player2;
 
 			// create game classes
-			PlayerController c1 = new PlayerController(this, game, "player1", player1, new List<Key>() { Key.A, Key.D }, maxDistance);
-			PlayerController c2 = new PlayerController(this, game, "player2", player2, new List<Key>() { Key.Left, Key.Right }, maxDistance);
+			PlayerController c1 = new PlayerController(this, this.p1BarData, game, "player1", player1, new List<Key>() { Key.A, Key.D }, Key.W, maxDistance);
+			PlayerController c2 = new PlayerController(this, this.p2BarData, game, "player2", player2, new List<Key>() { Key.Left, Key.Right }, Key.Up, maxDistance);
 
 			// generate random value
 			double waitTime = 2 + new Random().NextDouble() * 4;
 
 			Light1.Visibility = System.Windows.Visibility.Visible;
+			Helpers.PlaySFX("Countdown.wav", 1, false);
+
+			timeTracker.Visibility = Visibility.Hidden;
+
+			MediaPlayer ignition = Helpers.PlaySFX("ignition.wav", 1, false);
 
 			var timer = new System.Windows.Threading.DispatcherTimer { Interval = TimeSpan.FromSeconds(waitTime * 0.3) };
 			timer.Start();
@@ -57,14 +69,19 @@ namespace periode_1_gebruikersinteractie_groep_6.Windows
 			{
 				timer.Stop();
 				Light2.Visibility = System.Windows.Visibility.Visible;
+				Helpers.PlaySFX("Countdown.wav", 1, false);
 
 				var timer2 = new System.Windows.Threading.DispatcherTimer { Interval = TimeSpan.FromSeconds(waitTime * 0.7) };
 				timer2.Start();
 				timer2.Tick += (sender, args) =>
 				{
-					timer.Stop();
+					Helpers.PlaySFX("Countdown.wav", 1, false);
+					timer2.Stop();
 					Light2.Visibility = System.Windows.Visibility.Hidden;
 					Light1.Visibility = System.Windows.Visibility.Hidden;
+					timeTracker.Visibility = Visibility.Visible;
+					Helpers.EaseVolume(ignition, 0.7f, this.parent.Dispatcher);
+					Helpers.EaseTo(Helpers.currentMusic, 0.5f, oldVolume, parent.Dispatcher);
 				};
 			};
 
@@ -85,6 +102,9 @@ namespace periode_1_gebruikersinteractie_groep_6.Windows
 			this.p2.playerController = c2;
 
 			this.game = game;
+
+			var window = Window.GetWindow(parent);
+			window.KeyDown += keyDown;
 		}
 
 		public void setFinished(string player)
@@ -98,6 +118,24 @@ namespace periode_1_gebruikersinteractie_groep_6.Windows
 				PostRaceMenu postRace = new PostRaceMenu(parent, new List<playerRaceData>() { p1, p2 });
 				parent.ChangeContent(postRace);
 				game.Stop();
+			}
+		}
+
+		public void keyDown(object sender, KeyEventArgs e)
+		{
+			if (e.Key is Key.Escape && Light1.Visibility == System.Windows.Visibility.Hidden) // hidden check to not make it possible to pause before lights
+			{
+				game.Pause(null);
+
+				if (game.paused)
+				{
+					PauseMenu pause = new PauseMenu(parent, this);
+					pausemenu.Content = pause;
+				}
+				else
+				{
+					pausemenu.Content = null;
+				}
 			}
 		}
 	}

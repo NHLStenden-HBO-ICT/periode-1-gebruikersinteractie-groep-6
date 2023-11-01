@@ -3,7 +3,9 @@ using periode_1_gebruikersinteractie_groep_6.Logic;
 using periode_1_gebruikersinteractie_groep_6.Windows;
 using System;
 using System.Collections.Generic;
+using System.Windows.Controls;
 using System.Windows.Input;
+using System.Windows.Media;
 using System.Windows.Threading;
 
 namespace periode_1_gebruikersinteractie_groep_6.Classes
@@ -13,6 +15,7 @@ namespace periode_1_gebruikersinteractie_groep_6.Classes
 		public GameMain parent;
 		public GameCore game;
 		public PlayerView frontEnd;
+		public Grid dot;
 
 		public string plrName;
 
@@ -20,6 +23,7 @@ namespace periode_1_gebruikersinteractie_groep_6.Classes
 		public int keyIndex = 0;
 		public bool playerAccelerating = false;
 		public int accelerationFrameCount = 0;
+		public bool readyToGo = false;
 
 		public double capturedDelay = 0;
 		public double delay;
@@ -33,19 +37,28 @@ namespace periode_1_gebruikersinteractie_groep_6.Classes
 		public double currentTime = 0;
 		public double finishTime;
 
+		public MediaPlayer driveSound;
+
+		public Key startKey;
+
 		public static double lerp(double x, double y, double a)
 		{
 			return x * (1 - a) + y * a;
 		}
 
-		public PlayerController(GameMain parent, GameCore game, string plrName, PlayerView frontEnd, List<Key> playerKeys, int maxDistance)
+		public PlayerController(GameMain parent, Grid dot, GameCore game, string plrName, PlayerView frontEnd, List<Key> playerKeys, Key startKey, int maxDistance)
 		{
 			this.parent = parent;
 			this.game = game;
 			this.frontEnd = frontEnd;
 			this.playerKeys = playerKeys;
 			this.plrName = plrName;
+			this.dot = dot;
 			targetPosition = maxDistance;
+			this.startKey = startKey;
+
+			driveSound = Helpers.PlaySFX("loopEngine.wav", 0.5, true);
+			driveSound.Volume = 0;
 		}
 
 		public override void Start()
@@ -55,6 +68,18 @@ namespace periode_1_gebruikersinteractie_groep_6.Classes
 		{
 			frontEnd.Dispatcher.Invoke(DispatcherPriority.Normal, new Action(() =>
 			{
+				// I'm so, so sorry
+				// i got REALLY lazy
+				if (plrName == "player1")
+				{
+					TimeSpan currentTimeElapsed = TimeSpan.FromSeconds(currentTime);
+					string timeElapsed = string.Format("{0:00}:{1:00}.{2:00}",
+					  currentTimeElapsed.Minutes,
+					  currentTimeElapsed.Seconds,
+					  currentTimeElapsed.Milliseconds / 10.0);
+					parent.timeTracker.Content = timeElapsed;
+				}
+
 				if (capturedDelay < delay)
 				{
 					capturedDelay += dt;
@@ -62,6 +87,13 @@ namespace periode_1_gebruikersinteractie_groep_6.Classes
 				}
 				else
 				{
+					if (Keyboard.IsKeyDown(startKey) && !readyToGo)
+					{
+						readyToGo = true;
+					}
+
+					if (!readyToGo) return;
+
 					currentTime += dt;
 					if (Keyboard.IsKeyDown(playerKeys[keyIndex]))
 					{
@@ -98,6 +130,14 @@ namespace periode_1_gebruikersinteractie_groep_6.Classes
 				frontEnd.setPosition(currentPosition);
 				frontEnd.setSpeed(currentSpeed);
 
+				if (currentPosition <= targetPosition)
+				{
+					// update dot
+					double dotPosition = currentPosition / targetPosition;
+					double pos = parent.ActualWidth * dotPosition - dot.ActualWidth / 2;
+					Canvas.SetLeft(dot, pos);
+				}
+
 				if (currentPosition > targetPosition)
 				{
 					targetSpeed = currentSpeed;
@@ -106,10 +146,15 @@ namespace periode_1_gebruikersinteractie_groep_6.Classes
 					{
 						finishTime = currentTime;
 						parent.setFinished(plrName);
+						Helpers.EaseVolume(driveSound, 0.8f, parent.Dispatcher);
 					}
 
 					frontEnd.setSpeed((targetPosition - currentPosition) * 12);
+					return;
 				}
+
+				// sound pitch
+				driveSound.Volume = Math.Clamp(currentSpeed / 50, 0, 0.5);
 			}));
 		}
 

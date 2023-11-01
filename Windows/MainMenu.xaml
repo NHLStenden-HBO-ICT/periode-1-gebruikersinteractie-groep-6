@@ -75,28 +75,6 @@
             </Button>
 
             <Button
-				x:Name="scorebordButton"
-				Width="280"
-				Height="55"
-				Margin="0,10"
-				Background="#B1B1B1"
-				Click="openScorebord"
-				Content="SCOREBORD"
-				FontSize="42"
-				FontWeight="Bold"
-				Foreground="#1f1f1f">
-                <Button.Effect>
-                    <DropShadowEffect BlurRadius="2" ShadowDepth="0" />
-                </Button.Effect>
-                <Button.Resources>
-                    <Style TargetType="{x:Type Border}">
-                        <Setter Property="CornerRadius" Value="20" />
-                        <Setter Property="Background" Value="White" />
-                    </Style>
-                </Button.Resources>
-            </Button>
-        
-            <Button
 				x:Name="instellingenButton"
 				Width="320"
 				Height="55"

@@ -23,12 +23,6 @@ namespace periode_1_gebruikersinteractie_groep_6
 			parent.ChangeContent(instellingenUI);
 		}
 
-		private void openScorebord(object sender, RoutedEventArgs e)
-		{
-			Scoreboard scoreboard = new Scoreboard(this.parent);
-			parent.ChangeContent(scoreboard);
-		}
-
 		private void openUitleg(object sender, RoutedEventArgs e)
 		{
 			Instructies instructies = new Instructies(this.parent);

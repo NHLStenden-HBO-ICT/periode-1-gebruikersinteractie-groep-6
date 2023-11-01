@@ -102,7 +102,7 @@ namespace periode_1_gebruikersinteractie_groep_6.Windows
 		{
 			if (players[0].playerReady && players[1].playerReady)
 			{
-				GameMain race = new GameMain(parent, players[0], players[1], 5);
+				GameMain race = new GameMain(parent, players[0], players[1], 200);
 				parent.ChangeContent(race);
 			}
 		}
