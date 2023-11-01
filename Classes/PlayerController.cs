@@ -66,6 +66,11 @@ namespace periode_1_gebruikersinteractie_groep_6.Classes
 		}
 		public override void Update(float dt)
 		{
+			if (capturedDelay > delay)
+			{
+				currentTime += dt;
+			}
+
 			frontEnd.Dispatcher.Invoke(DispatcherPriority.Normal, new Action(() =>
 			{
 				// I'm so, so sorry
@@ -94,7 +99,6 @@ namespace periode_1_gebruikersinteractie_groep_6.Classes
 
 					if (!readyToGo) return;
 
-					currentTime += dt;
 					if (Keyboard.IsKeyDown(playerKeys[keyIndex]))
 					{
 						keyIndex++;
