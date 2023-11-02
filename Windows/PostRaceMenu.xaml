@@ -40,27 +40,29 @@
 			HorizontalAlignment="Center"
 			VerticalAlignment="Center"
 			Orientation="Vertical">
-			<Button
-				x:Name="MenuBtn"
-				Width="400"
-				Margin="0,0"
-				Padding="0, 10"
-				Background="#B1B1B1"
-				Click="openMainMenu"
-				Content="MENU"
-				FontSize="42"
-				FontWeight="Bold"
-				Foreground="#1f1f1f">
-				<Button.Effect>
-					<DropShadowEffect BlurRadius="0" ShadowDepth="0" />
-				</Button.Effect>
-				<Button.Resources>
-					<Style TargetType="{x:Type Border}">
-						<Setter Property="CornerRadius" Value="20" />
-						<Setter Property="Background" Value="White" />
-					</Style>
-				</Button.Resources>
-			</Button>
+			<Viewbox Stretch="Uniform">
+				<Button
+					x:Name="MenuBtn"
+					Width="400"
+					Margin="0,0"
+					Padding="0,10"
+					Background="#B1B1B1"
+					Click="openMainMenu"
+					Content="MENU"
+					FontSize="42"
+					FontWeight="Bold"
+					Foreground="#1f1f1f">
+					<Button.Effect>
+						<DropShadowEffect BlurRadius="0" ShadowDepth="0" />
+					</Button.Effect>
+					<Button.Resources>
+						<Style TargetType="{x:Type Border}">
+							<Setter Property="CornerRadius" Value="20" />
+							<Setter Property="Background" Value="White" />
+						</Style>
+					</Button.Resources>
+				</Button>
+			</Viewbox>
 		</StackPanel>
 
 		<StackPanel
@@ -69,27 +71,29 @@
 			HorizontalAlignment="Center"
 			VerticalAlignment="Center"
 			Orientation="Vertical">
-			<Button
+			<Viewbox Stretch="Uniform">
+				<Button
 				x:Name="HerstartBtn"
 				Width="400"
-				Padding="0, 10"
 				Margin="0,0"
+				Padding="0,10"
 				Background="#B1B1B1"
 				Click="openPreRaceMenu"
 				Content="HERSTART"
 				FontSize="42"
 				FontWeight="Bold"
 				Foreground="#1f1f1f">
-				<Button.Effect>
-					<DropShadowEffect BlurRadius="0" ShadowDepth="0" />
-				</Button.Effect>
-				<Button.Resources>
-					<Style TargetType="{x:Type Border}">
-						<Setter Property="CornerRadius" Value="20" />
-						<Setter Property="Background" Value="White" />
-					</Style>
-				</Button.Resources>
-			</Button>
+					<Button.Effect>
+						<DropShadowEffect BlurRadius="0" ShadowDepth="0" />
+					</Button.Effect>
+					<Button.Resources>
+						<Style TargetType="{x:Type Border}">
+							<Setter Property="CornerRadius" Value="20" />
+							<Setter Property="Background" Value="White" />
+						</Style>
+					</Button.Resources>
+				</Button>
+			</Viewbox>
 		</StackPanel>
 
 		<Border
@@ -106,8 +110,8 @@
 			Grid.Column="1"
 			Stretch="Uniform">
 			<TextBlock
-				Margin="2"
 				x:Name="p1Text"
+				Margin="2"
 				HorizontalAlignment="Center"
 				VerticalAlignment="Center"
 				FontFamily="Raleway"
@@ -144,8 +148,8 @@
 			Grid.Column="3"
 			Stretch="Uniform">
 			<TextBlock
-				Margin="2"
 				x:Name="p2Text"
+				Margin="2"
 				HorizontalAlignment="Center"
 				VerticalAlignment="Center"
 				FontFamily="Raleway"
